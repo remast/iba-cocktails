@@ -1,0 +1,568 @@
+{
+  "meta": {
+    "title": "IBA Official Cocktails List",
+    "description": "Complete list of 102 official cocktails recognized by the International Bartenders Association as of 2024/2025",
+    "last_updated": "2024-11-08",
+    "total_cocktails": 102,
+    "categories": 3,
+    "source": "https://iba-world.com"
+  },
+  "categories": {
+    "unforgettables": {
+      "name": "The Unforgettables",
+      "description": "Classic cocktails that have stood the test of time",
+      "count": 34
+    },
+    "contemporary": {
+      "name": "Contemporary Classics", 
+      "description": "Modern classics that have become staples",
+      "count": 34
+    },
+    "new_era": {
+      "name": "New Era Drinks",
+      "description": "Recent additions representing contemporary mixology",
+      "count": 34
+    }
+  },
+  "cocktails": [
+    {
+      "id": 1,
+      "name": "Alexander",
+      "category": "unforgettables",
+      "image_url": "https://iba-world.com/wp-content/uploads/2020/12/alexander.jpg",
+      "iba_url": "https://iba-world.com/cocktails/alexander/",
+      "views": "70.5K"
+    },
+    {
+      "id": 2,
+      "name": "Americano",
+      "category": "unforgettables", 
+      "image_url": "https://iba-world.com/wp-content/uploads/2020/12/americano.jpg",
+      "iba_url": "https://iba-world.com/cocktails/americano/",
+      "views": "85.5K"
+    },
+    {
+      "id": 3,
+      "name": "Angel Face",
+      "category": "unforgettables",
+      "image_url": "https://iba-world.com/wp-content/uploads/2020/12/angel-face.jpg",
+      "iba_url": "https://iba-world.com/cocktails/angel-face/",
+      "views": "39.2K"
+    },
+    {
+      "id": 4,
+      "name": "Aviation",
+      "category": "unforgettables",
+      "image_url": "https://iba-world.com/wp-content/uploads/2020/12/aviation.jpg",
+      "iba_url": "https://iba-world.com/cocktails/aviation/",
+      "views": "61.8K"
+    },
+    {
+      "id": 5,
+      "name": "Between the Sheets",
+      "category": "unforgettables",
+      "image_url": "https://iba-world.com/wp-content/uploads/2020/12/between-the-sheets.jpg",
+      "iba_url": "https://iba-world.com/cocktails/between-the-sheets/",
+      "views": "37.8K"
+    },
+    {
+      "id": 6,
+      "name": "Boulevardier",
+      "category": "unforgettables",
+      "image_url": "https://iba-world.com/wp-content/uploads/2020/12/boulevardier.jpg",
+      "iba_url": "https://iba-world.com/cocktails/boulevardier/",
+      "views": "73.9K"
+    },
+    {
+      "id": 7,
+      "name": "Brandy Crusta",
+      "category": "unforgettables",
+      "image_url": "https://iba-world.com/wp-content/uploads/2020/12/brandy-crusta.jpg",
+      "iba_url": "https://iba-world.com/cocktails/brandy-crusta/",
+      "views": "33.6K"
+    },
+    {
+      "id": 8,
+      "name": "Casino",
+      "category": "unforgettables",
+      "image_url": "https://iba-world.com/wp-content/uploads/2020/12/casino.jpg",
+      "iba_url": "https://iba-world.com/cocktails/casino/",
+      "views": "44.9K"
+    },
+    {
+      "id": 9,
+      "name": "Clover Club",
+      "category": "unforgettables",
+      "image_url": "https://iba-world.com/wp-content/uploads/2020/12/clover-club.jpg",
+      "iba_url": "https://iba-world.com/cocktails/clover-club/",
+      "views": "45.5K"
+    },
+    {
+      "id": 10,
+      "name": "Daiquiri",
+      "category": "unforgettables",
+      "image_url": "https://iba-world.com/wp-content/uploads/2020/12/daiquiri.jpg",
+      "iba_url": "https://iba-world.com/cocktails/daiquiri/"
+    },
+    {
+      "id": 11,
+      "name": "Dry Martini",
+      "category": "unforgettables",
+      "image_url": "https://iba-world.com/wp-content/uploads/2020/12/dry-martini.jpg",
+      "iba_url": "https://iba-world.com/cocktails/dry-martini/"
+    },
+    {
+      "id": 12,
+      "name": "Gibson",
+      "category": "unforgettables",
+      "image_url": "https://iba-world.com/wp-content/uploads/2020/12/gibson.jpg",
+      "iba_url": "https://iba-world.com/cocktails/gibson/"
+    },
+    {
+      "id": 13,
+      "name": "Gimlet",
+      "category": "unforgettables",
+      "image_url": "https://iba-world.com/wp-content/uploads/2020/12/gimlet.jpg",
+      "iba_url": "https://iba-world.com/cocktails/gimlet/"
+    },
+    {
+      "id": 14,
+      "name": "Gin Fizz",
+      "category": "unforgettables",
+      "image_url": "https://iba-world.com/wp-content/uploads/2020/12/gin-fizz.jpg",
+      "iba_url": "https://iba-world.com/cocktails/gin-fizz/"
+    },
+    {
+      "id": 15,
+      "name": "Grasshopper",
+      "category": "unforgettables",
+      "image_url": "https://iba-world.com/wp-content/uploads/2020/12/grasshopper.jpg",
+      "iba_url": "https://iba-world.com/cocktails/grasshopper/"
+    },
+    {
+      "id": 16,
+      "name": "Hanky Panky",
+      "category": "unforgettables",
+      "image_url": "https://iba-world.com/wp-content/uploads/2020/12/hanky-panky.jpg",
+      "iba_url": "https://iba-world.com/cocktails/hanky-panky/"
+    },
+    {
+      "id": 17,
+      "name": "John Collins",
+      "category": "unforgettables",
+      "image_url": "https://iba-world.com/wp-content/uploads/2020/12/john-collins.jpg",
+      "iba_url": "https://iba-world.com/cocktails/john-collins/"
+    },
+    {
+      "id": 18,
+      "name": "Last Word",
+      "category": "unforgettables",
+      "image_url": "https://iba-world.com/wp-content/uploads/2020/12/last-word.jpg",
+      "iba_url": "https://iba-world.com/cocktails/last-word/"
+    },
+    {
+      "id": 19,
+      "name": "Manhattan",
+      "category": "unforgettables",
+      "image_url": "https://iba-world.com/wp-content/uploads/2020/12/manhattan.jpg",
+      "iba_url": "https://iba-world.com/cocktails/manhattan/"
+    },
+    {
+      "id": 20,
+      "name": "Martinez",
+      "category": "unforgettables",
+      "image_url": "https://iba-world.com/wp-content/uploads/2020/12/martinez.jpg",
+      "iba_url": "https://iba-world.com/cocktails/martinez/"
+    },
+    {
+      "id": 21,
+      "name": "Mary Pickford",
+      "category": "unforgettables",
+      "image_url": "https://iba-world.com/wp-content/uploads/2020/12/mary-pickford.jpg",
+      "iba_url": "https://iba-world.com/cocktails/mary-pickford/"
+    },
+    {
+      "id": 22,
+      "name": "Mint Julep",
+      "category": "unforgettables",
+      "image_url": "https://iba-world.com/wp-content/uploads/2020/12/mint-julep.jpg",
+      "iba_url": "https://iba-world.com/cocktails/mint-julep/"
+    },
+    {
+      "id": 23,
+      "name": "Monkey Gland",
+      "category": "unforgettables",
+      "image_url": "https://iba-world.com/wp-content/uploads/2020/12/monkey-gland.jpg",
+      "iba_url": "https://iba-world.com/cocktails/monkey-gland/"
+    },
+    {
+      "id": 24,
+      "name": "Negroni",
+      "category": "unforgettables",
+      "image_url": "https://iba-world.com/wp-content/uploads/2020/12/negroni.jpg",
+      "iba_url": "https://iba-world.com/cocktails/negroni/"
+    },
+    {
+      "id": 25,
+      "name": "Old Fashioned",
+      "category": "unforgettables",
+      "image_url": "https://iba-world.com/wp-content/uploads/2020/12/old-fashioned.jpg",
+      "iba_url": "https://iba-world.com/cocktails/old-fashioned/"
+    },
+    {
+      "id": 26,
+      "name": "Paradise",
+      "category": "unforgettables",
+      "image_url": "https://iba-world.com/wp-content/uploads/2020/12/paradise.jpg",
+      "iba_url": "https://iba-world.com/cocktails/paradise/"
+    },
+    {
+      "id": 27,
+      "name": "Planter's Punch",
+      "category": "unforgettables",
+      "image_url": "https://iba-world.com/wp-content/uploads/2020/12/planters-punch.jpg",
+      "iba_url": "https://iba-world.com/cocktails/planters-punch/"
+    },
+    {
+      "id": 28,
+      "name": "Porto Flip",
+      "category": "unforgettables",
+      "image_url": "https://iba-world.com/wp-content/uploads/2020/12/porto-flip.jpg",
+      "iba_url": "https://iba-world.com/cocktails/porto-flip/"
+    },
+    {
+      "id": 29,
+      "name": "Ramos Gin Fizz",
+      "category": "unforgettables",
+      "image_url": "https://iba-world.com/wp-content/uploads/2020/12/ramos-gin-fizz.jpg",
+      "iba_url": "https://iba-world.com/cocktails/ramos-gin-fizz/"
+    },
+    {
+      "id": 30,
+      "name": "Sazerac",
+      "category": "unforgettables",
+      "image_url": "https://iba-world.com/wp-content/uploads/2020/12/sazerac.jpg",
+      "iba_url": "https://iba-world.com/cocktails/sazerac/"
+    },
+    {
+      "id": 31,
+      "name": "Sidecar",
+      "category": "unforgettables",
+      "image_url": "https://iba-world.com/wp-content/uploads/2020/12/sidecar.jpg",
+      "iba_url": "https://iba-world.com/cocktails/sidecar/"
+    },
+    {
+      "id": 32,
+      "name": "Stinger",
+      "category": "unforgettables",
+      "image_url": "https://iba-world.com/wp-content/uploads/2020/12/stinger.jpg",
+      "iba_url": "https://iba-world.com/cocktails/stinger/"
+    },
+    {
+      "id": 33,
+      "name": "Tuxedo",
+      "category": "unforgettables",
+      "image_url": "https://iba-world.com/wp-content/uploads/2020/12/tuxedo.jpg",
+      "iba_url": "https://iba-world.com/cocktails/tuxedo/"
+    },
+    {
+      "id": 34,
+      "name": "Whiskey Sour",
+      "category": "unforgettables",
+      "image_url": "https://iba-world.com/wp-content/uploads/2020/12/whiskey-sour.jpg",
+      "iba_url": "https://iba-world.com/cocktails/whiskey-sour/"
+    },
+    {
+      "id": 35,
+      "name": "Bellini",
+      "category": "contemporary",
+      "image_url": "https://iba-world.com/wp-content/uploads/2020/12/bellini.jpg",
+      "iba_url": "https://iba-world.com/cocktails/bellini/",
+      "views": "46.9K"
+    },
+    {
+      "id": 36,
+      "name": "Black Russian",
+      "category": "contemporary",
+      "image_url": "https://iba-world.com/wp-content/uploads/2020/12/black-russian.jpg",
+      "iba_url": "https://iba-world.com/cocktails/black-russian/",
+      "views": "58.1K"
+    },
+    {
+      "id": 37,
+      "name": "Bloody Mary",
+      "category": "contemporary",
+      "image_url": "https://iba-world.com/wp-content/uploads/2020/12/bloody-mary.jpg",
+      "iba_url": "https://iba-world.com/cocktails/bloody-mary/",
+      "views": "46.8K"
+    },
+    {
+      "id": 38,
+      "name": "Caipirinha",
+      "category": "contemporary",
+      "image_url": "https://iba-world.com/wp-content/uploads/2020/12/caipirinha.jpg",
+      "iba_url": "https://iba-world.com/cocktails/caipirinha/",
+      "views": "267.4K"
+    },
+    {
+      "id": 39,
+      "name": "Cardinale",
+      "category": "contemporary",
+      "image_url": "https://iba-world.com/wp-content/uploads/2020/12/cardinale.jpg",
+      "iba_url": "https://iba-world.com/cocktails/cardinale/",
+      "views": "27.6K"
+    },
+    {
+      "id": 40,
+      "name": "Champagne Cocktail",
+      "category": "contemporary",
+      "image_url": "https://iba-world.com/wp-content/uploads/2020/12/champagne-cocktail.jpg",
+      "iba_url": "https://iba-world.com/cocktails/champagne-cocktail/",
+      "views": "25.6K"
+    },
+    {
+      "id": 41,
+      "name": "Corpse Reviver #2",
+      "category": "contemporary",
+      "image_url": "https://iba-world.com/wp-content/uploads/2020/12/corpse-reviver-2.jpg",
+      "iba_url": "https://iba-world.com/cocktails/corpse-reviver-2/",
+      "views": "33.9K"
+    },
+    {
+      "id": 42,
+      "name": "Cosmopolitan",
+      "category": "contemporary",
+      "image_url": "https://iba-world.com/wp-content/uploads/2020/12/cosmopolitan.jpg",
+      "iba_url": "https://iba-world.com/cocktails/cosmopolitan/"
+    },
+    {
+      "id": 43,
+      "name": "Cuba Libre",
+      "category": "contemporary",
+      "image_url": "https://iba-world.com/wp-content/uploads/2020/12/cuba-libre.jpg",
+      "iba_url": "https://iba-world.com/cocktails/cuba-libre/"
+    },
+    {
+      "id": 44,
+      "name": "Dark 'n' Stormy",
+      "category": "contemporary",
+      "image_url": "https://iba-world.com/wp-content/uploads/2020/12/dark-n-stormy.jpg",
+      "iba_url": "https://iba-world.com/cocktails/dark-n-stormy/"
+    },
+    {
+      "id": 45,
+      "name": "Espresso Martini",
+      "category": "contemporary",
+      "image_url": "https://iba-world.com/wp-content/uploads/2020/12/espresso-martini.jpg",
+      "iba_url": "https://iba-world.com/cocktails/espresso-martini/"
+    },
+    {
+      "id": 46,
+      "name": "Godfather",
+      "category": "contemporary",
+      "image_url": "https://iba-world.com/wp-content/uploads/2020/12/godfather.jpg",
+      "iba_url": "https://iba-world.com/cocktails/godfather/"
+    },
+    {
+      "id": 47,
+      "name": "Golden Dream",
+      "category": "contemporary",
+      "image_url": "https://iba-world.com/wp-content/uploads/2020/12/golden-dream.jpg",
+      "iba_url": "https://iba-world.com/cocktails/golden-dream/"
+    },
+    {
+      "id": 48,
+      "name": "Harvey Wallbanger",
+      "category": "contemporary",
+      "image_url": "https://iba-world.com/wp-content/uploads/2020/12/harvey-wallbanger.jpg",
+      "iba_url": "https://iba-world.com/cocktails/harvey-wallbanger/"
+    },
+    {
+      "id": 49,
+      "name": "Hemingway Special",
+      "category": "contemporary",
+      "image_url": "https://iba-world.com/wp-content/uploads/2020/12/hemingway-special.jpg",
+      "iba_url": "https://iba-world.com/cocktails/hemingway-special/"
+    },
+    {
+      "id": 50,
+      "name": "Horse's Neck",
+      "category": "contemporary",
+      "image_url": "https://iba-world.com/wp-content/uploads/2020/12/horses-neck.jpg",
+      "iba_url": "https://iba-world.com/cocktails/horses-neck/"
+    },
+    {
+      "id": 51,
+      "name": "Irish Coffee",
+      "category": "contemporary",
+      "image_url": "https://iba-world.com/wp-content/uploads/2020/12/irish-coffee.jpg",
+      "iba_url": "https://iba-world.com/cocktails/irish-coffee/"
+    },
+    {
+      "id": 52,
+      "name": "Kir",
+      "category": "contemporary",
+      "image_url": "https://iba-world.com/wp-content/uploads/2020/12/kir.jpg",
+      "iba_url": "https://iba-world.com/cocktails/kir/"
+    },
+    {
+      "id": 53,
+      "name": "Long Island Iced Tea",
+      "category": "contemporary",
+      "image_url": "https://iba-world.com/wp-content/uploads/2020/12/long-island-iced-tea.jpg",
+      "iba_url": "https://iba-world.com/cocktails/long-island-iced-tea/"
+    },
+    {
+      "id": 54,
+      "name": "Mai Tai",
+      "category": "contemporary",
+      "image_url": "https://iba-world.com/wp-content/uploads/2020/12/mai-tai.jpg",
+      "iba_url": "https://iba-world.com/cocktails/mai-tai/"
+    },
+    {
+      "id": 55,
+      "name": "Margarita",
+      "category": "contemporary",
+      "image_url": "https://iba-world.com/wp-content/uploads/2020/12/margarita.jpg",
+      "iba_url": "https://iba-world.com/cocktails/margarita/"
+    },
+    {
+      "id": 56,
+      "name": "Mimosa",
+      "category": "contemporary",
+      "image_url": "https://iba-world.com/wp-content/uploads/2020/12/mimosa.jpg",
+      "iba_url": "https://iba-world.com/cocktails/mimosa/"
+    },
+    {
+      "id": 57,
+      "name": "Mint Julep",
+      "category": "contemporary",
+      "image_url": "https://iba-world.com/wp-content/uploads/2020/12/mint-julep.jpg",
+      "iba_url": "https://iba-world.com/cocktails/mint-julep/"
+    },
+    {
+      "id": 58,
+      "name": "Mojito",
+      "category": "contemporary",
+      "image_url": "https://iba-world.com/wp-content/uploads/2020/12/mojito.jpg",
+      "iba_url": "https://iba-world.com/cocktails/mojito/"
+    },
+    {
+      "id": 59,
+      "name": "Moscow Mule",
+      "category": "contemporary",
+      "image_url": "https://iba-world.com/wp-content/uploads/2020/12/moscow-mule.jpg",
+      "iba_url": "https://iba-world.com/cocktails/moscow-mule/"
+    },
+    {
+      "id": 60,
+      "name": "Mudslide",
+      "category": "contemporary",
+      "image_url": "https://iba-world.com/wp-content/uploads/2020/12/mudslide.jpg",
+      "iba_url": "https://iba-world.com/cocktails/mudslide/"
+    },
+    {
+      "id": 61,
+      "name": "Piña Colada",
+      "category": "contemporary",
+      "image_url": "https://iba-world.com/wp-content/uploads/2020/12/pina-colada.jpg",
+      "iba_url": "https://iba-world.com/cocktails/pina-colada/"
+    },
+    {
+      "id": 62,
+      "name": "Pisco Sour",
+      "category": "contemporary",
+      "image_url": "https://iba-world.com/wp-content/uploads/2020/12/pisco-sour.jpg",
+      "iba_url": "https://iba-world.com/cocktails/pisco-sour/"
+    },
+    {
+      "id": 63,
+      "name": "Russian Spring Punch",
+      "category": "contemporary",
+      "image_url": "https://iba-world.com/wp-content/uploads/2020/12/russian-spring-punch.jpg",
+      "iba_url": "https://iba-world.com/cocktails/russian-spring-punch/"
+    },
+    {
+      "id": 64,
+      "name": "Rusty Nail",
+      "category": "contemporary",
+      "image_url": "https://iba-world.com/wp-content/uploads/2020/12/rusty-nail.jpg",
+      "iba_url": "https://iba-world.com/cocktails/rusty-nail/"
+    },
+    {
+      "id": 65,
+      "name": "Screwdriver",
+      "category": "contemporary",
+      "image_url": "https://iba-world.com/wp-content/uploads/2020/12/screwdriver.jpg",
+      "iba_url": "https://iba-world.com/cocktails/screwdriver/"
+    },
+    {
+      "id": 66,
+      "name": "Sea Breeze",
+      "category": "contemporary",
+      "image_url": "https://iba-world.com/wp-content/uploads/2020/12/sea-breeze.jpg",
+      "iba_url": "https://iba-world.com/cocktails/sea-breeze/"
+    },
+    {
+      "id": 67,
+      "name": "Sex on the Beach",
+      "category": "contemporary",
+      "image_url": "https://iba-world.com/wp-content/uploads/2020/12/sex-on-the-beach.jpg",
+      "iba_url": "https://iba-world.com/cocktails/sex-on-the-beach/"
+    },
+    {
+      "id": 68,
+      "name": "Singapore Sling",
+      "category": "contemporary",
+      "image_url": "https://iba-world.com/wp-content/uploads/2020/12/singapore-sling.jpg",
+      "iba_url": "https://iba-world.com/cocktails/singapore-sling/"
+    },
+    {
+      "id": 69,
+      "name": "Tequila Sunrise",
+      "category": "contemporary",
+      "image_url": "https://iba-world.com/wp-content/uploads/2020/12/tequila-sunrise.jpg",
+      "iba_url": "https://iba-world.com/cocktails/tequila-sunrise/"
+    },
+    {
+      "id": 70,
+      "name": "White Russian",
+      "category": "contemporary",
+      "image_url": "https://iba-world.com/wp-content/uploads/2020/12/white-russian.jpg",
+      "iba_url": "https://iba-world.com/cocktails/white-russian/"
+    },
+    {
+      "id": 71,
+      "name": "Bee's Knees",
+      "category": "new_era",
+      "image_url": "https://iba-world.com/wp-content/uploads/2020/12/bees-knees.jpg",
+      "iba_url": "https://iba-world.com/cocktails/bees-knees/",
+      "views": "46.8K"
+    },
+    {
+      "id": 72,
+      "name": "Bramble",
+      "category": "new_era",
+      "image_url": "https://iba-world.com/wp-content/uploads/2020/12/bramble.jpg",
+      "iba_url": "https://iba-world.com/cocktails/bramble/",
+      "views": "46.8K"
+    },
+    {
+      "id": 73,
+      "name": "Canchanchara",
+      "category": "new_era",
+      "image_url": "https://iba-world.com/wp-content/uploads/2020/12/canchanchara.jpg",
+      "iba_url": "https://iba-world.com/cocktails/canchanchara/",
+      "views": "34.1K"
+    },
+    {
+      "id": 74,
+      "name": "Chartreuse Swizzle",
+      "category": "new_era",
+      "image_url": "https://iba-world.com/wp-content/uploads/2024/11/chartreuse-swizzle.jpg",
+      "iba_url": "https://iba-world.com/cocktails/chartreuse-swizzle/",
+      "views": "31.7K",
+      "added": "2024"
+    }
+  ]
+}

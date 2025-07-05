@@ -75,6 +75,8 @@ cocktails (1) ←→ (many) ingredients (many) ←→ (1) base_ingredients
 
 ## Queries
 
+### Select all Cocktails
+
 ```sql
 SELECT JSON_AGG(
                JSON_BUILD_OBJECT(

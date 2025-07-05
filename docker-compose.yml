@@ -1,0 +1,29 @@
+version: "3.9"
+
+services:
+  db:
+    image: postgres:17
+    container_name: cocktails-db
+    environment:
+      POSTGRES_DB: cocktails
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+    volumes:
+      # Explicitly mount init scripts in execution order
+      - ./sql/001_ddl_create_base_ingredients.sql:/docker-entrypoint-initdb.d/001_ddl_create_base_ingredients.sql:ro
+      - ./sql/002_ddl_create_cocktails.sql:/docker-entrypoint-initdb.d/002_ddl_create_cocktails.sql:ro
+      - ./sql/003_data_insert_cocktails.sql:/docker-entrypoint-initdb.d/003_data_insert_cocktails.sql:ro
+    ports:
+      - "5432:5432"
+
+  api:
+    build:
+      context: ./api
+    container_name: cocktails-api
+    depends_on:
+      - db
+    environment:
+      # Connection string used by the Go API (adjust if your code expects individual vars)
+      DATABASE_URL: postgres://postgres:postgres@db:5432/cocktails?sslmode=disable
+    ports:
+      - "8080:8080"

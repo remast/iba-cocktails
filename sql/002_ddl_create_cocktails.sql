@@ -14,22 +14,9 @@
 -----------------------------
 
 -- UUID generator
-CREATE EXTENSION IF NOT EXISTS "pgcrypto";
+-- CREATE EXTENSION IF NOT EXISTS "pgcrypto";
 -- Remove diacritics for clean slugs
 CREATE EXTENSION IF NOT EXISTS "unaccent";
-
--- Utility function: slugify(text) → text
--- Turns arbitrary strings into ASCII-only, lowercase, dash-separated slugs
-CREATE OR REPLACE FUNCTION slugify(in_str text)
-RETURNS text AS $$
-    SELECT regexp_replace(
-             regexp_replace(
-               lower(unaccent(in_str)),          -- 1) strip accents + lowercase
-               '\s+', '-', 'g'                  -- 2) collapse whitespace → ―
-             ),
-             '[^a-z0-9\-]', '', 'g'             -- 3) remove non url-safe chars
-           );
-$$ LANGUAGE sql IMMUTABLE STRICT;
 
 -----------------------------
 -- 2. Main tables          --

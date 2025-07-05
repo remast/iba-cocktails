@@ -49,16 +49,22 @@ def escape_sql(text: str | None) -> str:
 
 # --- Parse base ingredients ---------------------------------------------------
 
-def extract_base_slugs() -> set[str]:
-    pattern = re.compile(r"slugify\('([^']+)'\)")
-    names: set[str] = set()
-    with BASE_ING_SQL.open("r", encoding="utf-8") as f:
-        for line in f:
+def parse_base_ingredients() -> dict[str, str]:
+    """Return mapping slug -> UUID for all base ingredients defined in DDL."""
+    # Example line:
+    # ('00000000-0000-0000-0000-000000000025', slugify('Gin'), 'Gin', 40, NULL),
+    pattern = re.compile(
+        r"'([0-9a-fA-F\-]{36})'\s*,\s*slugify\('([^']+)'\)",
+        re.IGNORECASE,
+    )
+    mapping: dict[str, str] = {}
+    with BASE_ING_SQL.open("r", encoding="utf-8") as fp:
+        for line in fp:
             m = pattern.search(line)
             if m:
-                names.add(m.group(1))
-    # Convert to slugs
-    return {slugify(n) for n in names}
+                uuid, name = m.groups()
+                mapping[slugify(name)] = uuid.lower()
+    return mapping
 
 
 # --- Build SQL ----------------------------------------------------------------
@@ -66,7 +72,9 @@ def extract_base_slugs() -> set[str]:
 def main():
     # Load data
     recipes = json.loads(RECIPES_JSON.read_text("utf-8"))
-    valid_base_slugs = extract_base_slugs()
+    base_map = parse_base_ingredients()
+    valid_base_slugs = set(base_map.keys())
+    unmatched: dict[str, set[str]] = {}  # ingredient name -> set[cocktail names]
 
     out_lines: list[str] = [
         "-- -------------------------------------------------------------",
@@ -113,6 +121,8 @@ def main():
                 continue  # skip 'special' only rows
             ing_slug = slugify(ing_name)
             if ing_slug not in valid_base_slugs:
+                # Track missing for reporting
+                unmatched.setdefault(ing_name, set()).add(recipe["name"])
                 continue  # unknown base ingredient
 
             amount = ing.get("amount")
@@ -120,14 +130,17 @@ def main():
             label = ing.get("label")
             special = ing.get("special")  # rarely present together with ingredient
 
+            base_id = base_map[ing_slug]
+            comment = ing_name.replace('*/', '* /')  # guard against premature comment close
             ing_values.append(
-                "((SELECT id FROM new_cocktail), {pos}, (SELECT id FROM base_ingredients WHERE slug=slugify('{orig}')), {amt}, {unit}, {label}, {spec})".format(
+                "((SELECT id FROM new_cocktail), {pos}, '{uuid}', {amt}, {unit}, {label}, {spec}) /* {comment} */".format(
                     pos=pos,
-                    orig=ing_name.replace("'", "''"),
+                    uuid=base_id,
                     amt=(str(amount) if amount is not None else "NULL"),
                     unit=escape_sql(unit),
                     label=escape_sql(label),
                     spec=escape_sql(special),
+                    comment=comment,
                 )
             )
         if ing_values:
@@ -140,9 +153,34 @@ def main():
             out_lines[-1] += ";\n"  # simply terminate the INSERT
             out_lines.append("\n-- (No mapped ingredients)\n")
 
+    if unmatched:
+        # Prepend DO blocks that will raise an error when the SQL script is executed
+        out_lines.append("-- -------------------------------------------------------------")
+        out_lines.append("-- ERROR: Unmatched base ingredients (will abort execution) --")
+        out_lines.append("-- -------------------------------------------------------------")
+        for ing, cocktails in sorted(unmatched.items()):
+            c_list = ", ".join(sorted(cocktails))
+            msg = f"Base ingredient not found: {ing} (used in: {c_list})"
+            out_lines.append(
+                "DO $$\nBEGIN\n    RAISE EXCEPTION '%s';\nEND $$;\n" % msg.replace("'", "''")
+            )
+        out_lines.append("\n")
+
     # Write
     OUTPUT_SQL.write_text("\n".join(out_lines), encoding="utf-8")
     print(f"Wrote {OUTPUT_SQL.relative_to(ROOT)} with {len(recipes)} cocktails.")
+
+    # Report any unmatched ingredients
+    if unmatched:
+        print("\n⚠️  ERROR: The following ingredients were not found in base_ingredients and were included as fatal errors in the SQL:")
+        for ing, cocktails in sorted(unmatched.items()):
+            c_list = ", ".join(sorted(cocktails))
+            print(f"  • {ing}  (used in: {c_list})")
+        # Return non-zero exit status so CI can catch it
+        import sys
+        sys.exit(1)
+    else:
+        print("All recipe ingredients successfully matched to base_ingredients.")
 
 
 if __name__ == "__main__":

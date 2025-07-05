@@ -12,9 +12,9 @@ WITH new_cocktail AS (
 )
 INSERT INTO ingredients (cocktail_id, position, base_ingredient_id, amount, unit, label, special)
 VALUES
-    ((SELECT id FROM new_cocktail), 1, (SELECT id FROM base_ingredients WHERE slug=slugify('Gin')), 3, 'cl', NULL, NULL),
-    ((SELECT id FROM new_cocktail), 2, (SELECT id FROM base_ingredients WHERE slug=slugify('Campari')), 3, 'cl', NULL, NULL),
-    ((SELECT id FROM new_cocktail), 3, (SELECT id FROM base_ingredients WHERE slug=slugify('Vermouth')), 3, 'cl', 'Sweet red vermouth', NULL);
+    ((SELECT id FROM new_cocktail), 1, '00000000-0000-0000-0000-000000000025', 3, 'cl', NULL, NULL) /* Gin */,
+    ((SELECT id FROM new_cocktail), 2, '00000000-0000-0000-0000-000000000007', 3, 'cl', NULL, NULL) /* Campari */,
+    ((SELECT id FROM new_cocktail), 3, '00000000-0000-0000-0000-000000000049', 3, 'cl', 'Sweet red vermouth', NULL) /* Vermouth */;
 
 -- Cocktail: Old Fashioned
 WITH new_cocktail AS (
@@ -24,7 +24,7 @@ WITH new_cocktail AS (
 )
 INSERT INTO ingredients (cocktail_id, position, base_ingredient_id, amount, unit, label, special)
 VALUES
-    ((SELECT id FROM new_cocktail), 1, (SELECT id FROM base_ingredients WHERE slug=slugify('Whiskey')), 4.5, 'cl', 'Bourbon or rye whiskey', NULL);
+    ((SELECT id FROM new_cocktail), 1, '00000000-0000-0000-0000-000000000051', 4.5, 'cl', 'Bourbon or rye whiskey', NULL) /* Whiskey */;
 
 -- Cocktail: Tuxedo
 WITH new_cocktail AS (
@@ -34,8 +34,8 @@ WITH new_cocktail AS (
 )
 INSERT INTO ingredients (cocktail_id, position, base_ingredient_id, amount, unit, label, special)
 VALUES
-    ((SELECT id FROM new_cocktail), 1, (SELECT id FROM base_ingredients WHERE slug=slugify('Gin')), 3, 'cl', 'Old Tom Gin', NULL),
-    ((SELECT id FROM new_cocktail), 2, (SELECT id FROM base_ingredients WHERE slug=slugify('Vermouth')), 3, 'cl', 'Dry vermouth', NULL);
+    ((SELECT id FROM new_cocktail), 1, '00000000-0000-0000-0000-000000000025', 3, 'cl', 'Old Tom Gin', NULL) /* Gin */,
+    ((SELECT id FROM new_cocktail), 2, '00000000-0000-0000-0000-000000000049', 3, 'cl', 'Dry vermouth', NULL) /* Vermouth */;
 
 -- Cocktail: Mojito
 WITH new_cocktail AS (
@@ -45,8 +45,8 @@ WITH new_cocktail AS (
 )
 INSERT INTO ingredients (cocktail_id, position, base_ingredient_id, amount, unit, label, special)
 VALUES
-    ((SELECT id FROM new_cocktail), 1, (SELECT id FROM base_ingredients WHERE slug=slugify('White rum')), 4, 'cl', 'White Cuban Rum', NULL),
-    ((SELECT id FROM new_cocktail), 2, (SELECT id FROM base_ingredients WHERE slug=slugify('Lime juice')), 3, 'cl', NULL, NULL);
+    ((SELECT id FROM new_cocktail), 1, '00000000-0000-0000-0000-000000000052', 4, 'cl', 'White Cuban Rum', NULL) /* White rum */,
+    ((SELECT id FROM new_cocktail), 2, '00000000-0000-0000-0000-000000000033', 3, 'cl', NULL, NULL) /* Lime juice */;
 
 -- Cocktail: Horse's Neck
 WITH new_cocktail AS (
@@ -56,8 +56,8 @@ WITH new_cocktail AS (
 )
 INSERT INTO ingredients (cocktail_id, position, base_ingredient_id, amount, unit, label, special)
 VALUES
-    ((SELECT id FROM new_cocktail), 1, (SELECT id FROM base_ingredients WHERE slug=slugify('Cognac')), 4, 'cl', NULL, NULL),
-    ((SELECT id FROM new_cocktail), 2, (SELECT id FROM base_ingredients WHERE slug=slugify('Ginger Ale')), 12, 'cl', NULL, NULL);
+    ((SELECT id FROM new_cocktail), 1, '00000000-0000-0000-0000-000000000012', 4, 'cl', NULL, NULL) /* Cognac */,
+    ((SELECT id FROM new_cocktail), 2, '00000000-0000-0000-0000-000000000026', 12, 'cl', NULL, NULL) /* Ginger Ale */;
 
 -- Cocktail: Planter's Punch
 WITH new_cocktail AS (
@@ -67,12 +67,12 @@ WITH new_cocktail AS (
 )
 INSERT INTO ingredients (cocktail_id, position, base_ingredient_id, amount, unit, label, special)
 VALUES
-    ((SELECT id FROM new_cocktail), 1, (SELECT id FROM base_ingredients WHERE slug=slugify('Dark rum')), 4.5, 'cl', NULL, NULL),
-    ((SELECT id FROM new_cocktail), 2, (SELECT id FROM base_ingredients WHERE slug=slugify('Orange juice')), 3.5, 'cl', NULL, NULL),
-    ((SELECT id FROM new_cocktail), 3, (SELECT id FROM base_ingredients WHERE slug=slugify('Pineapple juice')), 3.5, 'cl', NULL, NULL),
-    ((SELECT id FROM new_cocktail), 4, (SELECT id FROM base_ingredients WHERE slug=slugify('Lemon juice')), 2, 'cl', NULL, NULL),
-    ((SELECT id FROM new_cocktail), 5, (SELECT id FROM base_ingredients WHERE slug=slugify('Syrup')), 1, 'cl', 'Grenadine', NULL),
-    ((SELECT id FROM new_cocktail), 6, (SELECT id FROM base_ingredients WHERE slug=slugify('Syrup')), 1, 'cl', 'Sugar syrup', NULL);
+    ((SELECT id FROM new_cocktail), 1, '00000000-0000-0000-0000-000000000018', 4.5, 'cl', NULL, NULL) /* Dark rum */,
+    ((SELECT id FROM new_cocktail), 2, '00000000-0000-0000-0000-000000000036', 3.5, 'cl', NULL, NULL) /* Orange juice */,
+    ((SELECT id FROM new_cocktail), 3, '00000000-0000-0000-0000-000000000039', 3.5, 'cl', NULL, NULL) /* Pineapple juice */,
+    ((SELECT id FROM new_cocktail), 4, '00000000-0000-0000-0000-000000000031', 2, 'cl', NULL, NULL) /* Lemon juice */,
+    ((SELECT id FROM new_cocktail), 5, '00000000-0000-0000-0000-000000000045', 1, 'cl', 'Grenadine', NULL) /* Syrup */,
+    ((SELECT id FROM new_cocktail), 6, '00000000-0000-0000-0000-000000000045', 1, 'cl', 'Sugar syrup', NULL) /* Syrup */;
 
 -- Cocktail: Sea Breeze
 WITH new_cocktail AS (
@@ -82,9 +82,9 @@ WITH new_cocktail AS (
 )
 INSERT INTO ingredients (cocktail_id, position, base_ingredient_id, amount, unit, label, special)
 VALUES
-    ((SELECT id FROM new_cocktail), 1, (SELECT id FROM base_ingredients WHERE slug=slugify('Vodka')), 4, 'cl', NULL, NULL),
-    ((SELECT id FROM new_cocktail), 2, (SELECT id FROM base_ingredients WHERE slug=slugify('Cranberry juice')), 12, 'cl', NULL, NULL),
-    ((SELECT id FROM new_cocktail), 3, (SELECT id FROM base_ingredients WHERE slug=slugify('Grapefruit juice')), 3, 'cl', NULL, NULL);
+    ((SELECT id FROM new_cocktail), 1, '00000000-0000-0000-0000-000000000050', 4, 'cl', NULL, NULL) /* Vodka */,
+    ((SELECT id FROM new_cocktail), 2, '00000000-0000-0000-0000-000000000014', 12, 'cl', NULL, NULL) /* Cranberry juice */,
+    ((SELECT id FROM new_cocktail), 3, '00000000-0000-0000-0000-000000000028', 3, 'cl', NULL, NULL) /* Grapefruit juice */;
 
 -- Cocktail: Pisco Sour
 WITH new_cocktail AS (
@@ -94,9 +94,9 @@ WITH new_cocktail AS (
 )
 INSERT INTO ingredients (cocktail_id, position, base_ingredient_id, amount, unit, label, special)
 VALUES
-    ((SELECT id FROM new_cocktail), 1, (SELECT id FROM base_ingredients WHERE slug=slugify('Pisco')), 4.5, 'cl', NULL, NULL),
-    ((SELECT id FROM new_cocktail), 2, (SELECT id FROM base_ingredients WHERE slug=slugify('Lemon juice')), 3, 'cl', NULL, NULL),
-    ((SELECT id FROM new_cocktail), 3, (SELECT id FROM base_ingredients WHERE slug=slugify('Syrup')), 2, 'cl', 'Sugar syrup', NULL);
+    ((SELECT id FROM new_cocktail), 1, '00000000-0000-0000-0000-000000000040', 4.5, 'cl', NULL, NULL) /* Pisco */,
+    ((SELECT id FROM new_cocktail), 2, '00000000-0000-0000-0000-000000000031', 3, 'cl', NULL, NULL) /* Lemon juice */,
+    ((SELECT id FROM new_cocktail), 3, '00000000-0000-0000-0000-000000000045', 2, 'cl', 'Sugar syrup', NULL) /* Syrup */;
 
 -- Cocktail: Long Island Iced Tea
 WITH new_cocktail AS (
@@ -106,13 +106,13 @@ WITH new_cocktail AS (
 )
 INSERT INTO ingredients (cocktail_id, position, base_ingredient_id, amount, unit, label, special)
 VALUES
-    ((SELECT id FROM new_cocktail), 1, (SELECT id FROM base_ingredients WHERE slug=slugify('Tequila')), 1.5, 'cl', NULL, NULL),
-    ((SELECT id FROM new_cocktail), 2, (SELECT id FROM base_ingredients WHERE slug=slugify('Vodka')), 1.5, 'cl', NULL, NULL),
-    ((SELECT id FROM new_cocktail), 3, (SELECT id FROM base_ingredients WHERE slug=slugify('White rum')), 1.5, 'cl', NULL, NULL),
-    ((SELECT id FROM new_cocktail), 4, (SELECT id FROM base_ingredients WHERE slug=slugify('Triple Sec')), 1.5, 'cl', NULL, NULL),
-    ((SELECT id FROM new_cocktail), 5, (SELECT id FROM base_ingredients WHERE slug=slugify('Gin')), 1.5, 'cl', NULL, NULL),
-    ((SELECT id FROM new_cocktail), 6, (SELECT id FROM base_ingredients WHERE slug=slugify('Lemon juice')), 2.5, 'cl', NULL, NULL),
-    ((SELECT id FROM new_cocktail), 7, (SELECT id FROM base_ingredients WHERE slug=slugify('Syrup')), 3.0, 'cl', 'Gomme syrup', NULL);
+    ((SELECT id FROM new_cocktail), 1, '00000000-0000-0000-0000-000000000046', 1.5, 'cl', NULL, NULL) /* Tequila */,
+    ((SELECT id FROM new_cocktail), 2, '00000000-0000-0000-0000-000000000050', 1.5, 'cl', NULL, NULL) /* Vodka */,
+    ((SELECT id FROM new_cocktail), 3, '00000000-0000-0000-0000-000000000052', 1.5, 'cl', NULL, NULL) /* White rum */,
+    ((SELECT id FROM new_cocktail), 4, '00000000-0000-0000-0000-000000000048', 1.5, 'cl', NULL, NULL) /* Triple Sec */,
+    ((SELECT id FROM new_cocktail), 5, '00000000-0000-0000-0000-000000000025', 1.5, 'cl', NULL, NULL) /* Gin */,
+    ((SELECT id FROM new_cocktail), 6, '00000000-0000-0000-0000-000000000031', 2.5, 'cl', NULL, NULL) /* Lemon juice */,
+    ((SELECT id FROM new_cocktail), 7, '00000000-0000-0000-0000-000000000045', 3.0, 'cl', 'Gomme syrup', NULL) /* Syrup */;
 
 -- Cocktail: Clover Club
 WITH new_cocktail AS (
@@ -122,9 +122,9 @@ WITH new_cocktail AS (
 )
 INSERT INTO ingredients (cocktail_id, position, base_ingredient_id, amount, unit, label, special)
 VALUES
-    ((SELECT id FROM new_cocktail), 1, (SELECT id FROM base_ingredients WHERE slug=slugify('Gin')), 4.5, 'cl', NULL, NULL),
-    ((SELECT id FROM new_cocktail), 2, (SELECT id FROM base_ingredients WHERE slug=slugify('Syrup')), 1.5, 'cl', 'Raspberry syrup', NULL),
-    ((SELECT id FROM new_cocktail), 3, (SELECT id FROM base_ingredients WHERE slug=slugify('Lemon juice')), 1.5, 'cl', NULL, NULL);
+    ((SELECT id FROM new_cocktail), 1, '00000000-0000-0000-0000-000000000025', 4.5, 'cl', NULL, NULL) /* Gin */,
+    ((SELECT id FROM new_cocktail), 2, '00000000-0000-0000-0000-000000000045', 1.5, 'cl', 'Raspberry syrup', NULL) /* Syrup */,
+    ((SELECT id FROM new_cocktail), 3, '00000000-0000-0000-0000-000000000031', 1.5, 'cl', NULL, NULL) /* Lemon juice */;
 
 -- Cocktail: Angel Face
 WITH new_cocktail AS (
@@ -134,9 +134,9 @@ WITH new_cocktail AS (
 )
 INSERT INTO ingredients (cocktail_id, position, base_ingredient_id, amount, unit, label, special)
 VALUES
-    ((SELECT id FROM new_cocktail), 1, (SELECT id FROM base_ingredients WHERE slug=slugify('Gin')), 3, 'cl', NULL, NULL),
-    ((SELECT id FROM new_cocktail), 2, (SELECT id FROM base_ingredients WHERE slug=slugify('Apricot brandy')), 3, 'cl', NULL, NULL),
-    ((SELECT id FROM new_cocktail), 3, (SELECT id FROM base_ingredients WHERE slug=slugify('Calvados')), 3, 'cl', NULL, NULL);
+    ((SELECT id FROM new_cocktail), 1, '00000000-0000-0000-0000-000000000025', 3, 'cl', NULL, NULL) /* Gin */,
+    ((SELECT id FROM new_cocktail), 2, '00000000-0000-0000-0000-000000000003', 3, 'cl', NULL, NULL) /* Apricot brandy */,
+    ((SELECT id FROM new_cocktail), 3, '00000000-0000-0000-0000-000000000006', 3, 'cl', NULL, NULL) /* Calvados */;
 
 -- Cocktail: Mimosa
 WITH new_cocktail AS (
@@ -146,8 +146,8 @@ WITH new_cocktail AS (
 )
 INSERT INTO ingredients (cocktail_id, position, base_ingredient_id, amount, unit, label, special)
 VALUES
-    ((SELECT id FROM new_cocktail), 1, (SELECT id FROM base_ingredients WHERE slug=slugify('Champagne')), 7.5, 'cl', NULL, NULL),
-    ((SELECT id FROM new_cocktail), 2, (SELECT id FROM base_ingredients WHERE slug=slugify('Orange juice')), 7.5, 'cl', NULL, NULL);
+    ((SELECT id FROM new_cocktail), 1, '00000000-0000-0000-0000-000000000008', 7.5, 'cl', NULL, NULL) /* Champagne */,
+    ((SELECT id FROM new_cocktail), 2, '00000000-0000-0000-0000-000000000036', 7.5, 'cl', NULL, NULL) /* Orange juice */;
 
 -- Cocktail: Whiskey Sour
 WITH new_cocktail AS (
@@ -157,9 +157,9 @@ WITH new_cocktail AS (
 )
 INSERT INTO ingredients (cocktail_id, position, base_ingredient_id, amount, unit, label, special)
 VALUES
-    ((SELECT id FROM new_cocktail), 1, (SELECT id FROM base_ingredients WHERE slug=slugify('Whiskey')), 4.5, 'cl', 'Bourbon whiskey', NULL),
-    ((SELECT id FROM new_cocktail), 2, (SELECT id FROM base_ingredients WHERE slug=slugify('Lemon juice')), 3.0, 'cl', NULL, NULL),
-    ((SELECT id FROM new_cocktail), 3, (SELECT id FROM base_ingredients WHERE slug=slugify('Syrup')), 1.5, 'cl', 'Sugar syrup', NULL);
+    ((SELECT id FROM new_cocktail), 1, '00000000-0000-0000-0000-000000000051', 4.5, 'cl', 'Bourbon whiskey', NULL) /* Whiskey */,
+    ((SELECT id FROM new_cocktail), 2, '00000000-0000-0000-0000-000000000031', 3.0, 'cl', NULL, NULL) /* Lemon juice */,
+    ((SELECT id FROM new_cocktail), 3, '00000000-0000-0000-0000-000000000045', 1.5, 'cl', 'Sugar syrup', NULL) /* Syrup */;
 
 -- Cocktail: Screwdriver
 WITH new_cocktail AS (
@@ -169,8 +169,8 @@ WITH new_cocktail AS (
 )
 INSERT INTO ingredients (cocktail_id, position, base_ingredient_id, amount, unit, label, special)
 VALUES
-    ((SELECT id FROM new_cocktail), 1, (SELECT id FROM base_ingredients WHERE slug=slugify('Vodka')), 5, 'cl', NULL, NULL),
-    ((SELECT id FROM new_cocktail), 2, (SELECT id FROM base_ingredients WHERE slug=slugify('Orange juice')), 10, 'cl', NULL, NULL);
+    ((SELECT id FROM new_cocktail), 1, '00000000-0000-0000-0000-000000000050', 5, 'cl', NULL, NULL) /* Vodka */,
+    ((SELECT id FROM new_cocktail), 2, '00000000-0000-0000-0000-000000000036', 10, 'cl', NULL, NULL) /* Orange juice */;
 
 -- Cocktail: Cuba Libre
 WITH new_cocktail AS (
@@ -180,9 +180,9 @@ WITH new_cocktail AS (
 )
 INSERT INTO ingredients (cocktail_id, position, base_ingredient_id, amount, unit, label, special)
 VALUES
-    ((SELECT id FROM new_cocktail), 1, (SELECT id FROM base_ingredients WHERE slug=slugify('White rum')), 5, 'cl', NULL, NULL),
-    ((SELECT id FROM new_cocktail), 2, (SELECT id FROM base_ingredients WHERE slug=slugify('Cola')), 12, 'cl', NULL, NULL),
-    ((SELECT id FROM new_cocktail), 3, (SELECT id FROM base_ingredients WHERE slug=slugify('Lime juice')), 1, 'cl', NULL, NULL);
+    ((SELECT id FROM new_cocktail), 1, '00000000-0000-0000-0000-000000000052', 5, 'cl', NULL, NULL) /* White rum */,
+    ((SELECT id FROM new_cocktail), 2, '00000000-0000-0000-0000-000000000013', 12, 'cl', NULL, NULL) /* Cola */,
+    ((SELECT id FROM new_cocktail), 3, '00000000-0000-0000-0000-000000000033', 1, 'cl', NULL, NULL) /* Lime juice */;
 
 -- Cocktail: Manhattan
 WITH new_cocktail AS (
@@ -192,8 +192,8 @@ WITH new_cocktail AS (
 )
 INSERT INTO ingredients (cocktail_id, position, base_ingredient_id, amount, unit, label, special)
 VALUES
-    ((SELECT id FROM new_cocktail), 1, (SELECT id FROM base_ingredients WHERE slug=slugify('Whiskey')), 5, 'cl', 'Rye whiskey', NULL),
-    ((SELECT id FROM new_cocktail), 2, (SELECT id FROM base_ingredients WHERE slug=slugify('Vermouth')), 2, 'cl', 'Red vermouth', NULL);
+    ((SELECT id FROM new_cocktail), 1, '00000000-0000-0000-0000-000000000051', 5, 'cl', 'Rye whiskey', NULL) /* Whiskey */,
+    ((SELECT id FROM new_cocktail), 2, '00000000-0000-0000-0000-000000000049', 2, 'cl', 'Red vermouth', NULL) /* Vermouth */;
 
 -- Cocktail: Porto Flip
 WITH new_cocktail AS (
@@ -203,9 +203,9 @@ WITH new_cocktail AS (
 )
 INSERT INTO ingredients (cocktail_id, position, base_ingredient_id, amount, unit, label, special)
 VALUES
-    ((SELECT id FROM new_cocktail), 1, (SELECT id FROM base_ingredients WHERE slug=slugify('Cognac')), 1.5, 'cl', NULL, NULL),
-    ((SELECT id FROM new_cocktail), 2, (SELECT id FROM base_ingredients WHERE slug=slugify('Red Port')), 4.5, 'cl', NULL, NULL),
-    ((SELECT id FROM new_cocktail), 3, (SELECT id FROM base_ingredients WHERE slug=slugify('Egg yolk')), 1, 'cl', NULL, NULL);
+    ((SELECT id FROM new_cocktail), 1, '00000000-0000-0000-0000-000000000012', 1.5, 'cl', NULL, NULL) /* Cognac */,
+    ((SELECT id FROM new_cocktail), 2, '00000000-0000-0000-0000-000000000043', 4.5, 'cl', NULL, NULL) /* Red Port */,
+    ((SELECT id FROM new_cocktail), 3, '00000000-0000-0000-0000-000000000023', 1, 'cl', NULL, NULL) /* Egg yolk */;
 
 -- Cocktail: Gin Fizz
 WITH new_cocktail AS (
@@ -215,10 +215,10 @@ WITH new_cocktail AS (
 )
 INSERT INTO ingredients (cocktail_id, position, base_ingredient_id, amount, unit, label, special)
 VALUES
-    ((SELECT id FROM new_cocktail), 1, (SELECT id FROM base_ingredients WHERE slug=slugify('Gin')), 4.5, 'cl', NULL, NULL),
-    ((SELECT id FROM new_cocktail), 2, (SELECT id FROM base_ingredients WHERE slug=slugify('Lemon juice')), 3, 'cl', NULL, NULL),
-    ((SELECT id FROM new_cocktail), 3, (SELECT id FROM base_ingredients WHERE slug=slugify('Syrup')), 1, 'cl', 'Sugar syrup', NULL),
-    ((SELECT id FROM new_cocktail), 4, (SELECT id FROM base_ingredients WHERE slug=slugify('Soda water')), 8, 'cl', NULL, NULL);
+    ((SELECT id FROM new_cocktail), 1, '00000000-0000-0000-0000-000000000025', 4.5, 'cl', NULL, NULL) /* Gin */,
+    ((SELECT id FROM new_cocktail), 2, '00000000-0000-0000-0000-000000000031', 3, 'cl', NULL, NULL) /* Lemon juice */,
+    ((SELECT id FROM new_cocktail), 3, '00000000-0000-0000-0000-000000000045', 1, 'cl', 'Sugar syrup', NULL) /* Syrup */,
+    ((SELECT id FROM new_cocktail), 4, '00000000-0000-0000-0000-000000000044', 8, 'cl', NULL, NULL) /* Soda water */;
 
 -- Cocktail: Espresso Martini
 WITH new_cocktail AS (
@@ -228,8 +228,8 @@ WITH new_cocktail AS (
 )
 INSERT INTO ingredients (cocktail_id, position, base_ingredient_id, amount, unit, label, special)
 VALUES
-    ((SELECT id FROM new_cocktail), 1, (SELECT id FROM base_ingredients WHERE slug=slugify('Vodka')), 5, 'cl', NULL, NULL),
-    ((SELECT id FROM new_cocktail), 2, (SELECT id FROM base_ingredients WHERE slug=slugify('Coffee liqueur')), 1, 'cl', 'Kahlúa', NULL);
+    ((SELECT id FROM new_cocktail), 1, '00000000-0000-0000-0000-000000000050', 5, 'cl', NULL, NULL) /* Vodka */,
+    ((SELECT id FROM new_cocktail), 2, '00000000-0000-0000-0000-000000000011', 1, 'cl', 'Kahlúa', NULL) /* Coffee liqueur */;
 
 -- Cocktail: Margarita
 WITH new_cocktail AS (
@@ -239,9 +239,9 @@ WITH new_cocktail AS (
 )
 INSERT INTO ingredients (cocktail_id, position, base_ingredient_id, amount, unit, label, special)
 VALUES
-    ((SELECT id FROM new_cocktail), 1, (SELECT id FROM base_ingredients WHERE slug=slugify('Tequila')), 3.5, 'cl', NULL, NULL),
-    ((SELECT id FROM new_cocktail), 2, (SELECT id FROM base_ingredients WHERE slug=slugify('Triple Sec')), 2, 'cl', 'Cointreau', NULL),
-    ((SELECT id FROM new_cocktail), 3, (SELECT id FROM base_ingredients WHERE slug=slugify('Lime juice')), 1.5, 'cl', NULL, NULL);
+    ((SELECT id FROM new_cocktail), 1, '00000000-0000-0000-0000-000000000046', 3.5, 'cl', NULL, NULL) /* Tequila */,
+    ((SELECT id FROM new_cocktail), 2, '00000000-0000-0000-0000-000000000048', 2, 'cl', 'Cointreau', NULL) /* Triple Sec */,
+    ((SELECT id FROM new_cocktail), 3, '00000000-0000-0000-0000-000000000033', 1.5, 'cl', NULL, NULL) /* Lime juice */;
 
 -- Cocktail: Aviation
 WITH new_cocktail AS (
@@ -251,9 +251,9 @@ WITH new_cocktail AS (
 )
 INSERT INTO ingredients (cocktail_id, position, base_ingredient_id, amount, unit, label, special)
 VALUES
-    ((SELECT id FROM new_cocktail), 1, (SELECT id FROM base_ingredients WHERE slug=slugify('Gin')), 4.5, 'cl', NULL, NULL),
-    ((SELECT id FROM new_cocktail), 2, (SELECT id FROM base_ingredients WHERE slug=slugify('Cherry liqueur')), 1.5, 'cl', 'Maraschino', NULL),
-    ((SELECT id FROM new_cocktail), 3, (SELECT id FROM base_ingredients WHERE slug=slugify('Lemon juice')), 1.5, 'cl', NULL, NULL);
+    ((SELECT id FROM new_cocktail), 1, '00000000-0000-0000-0000-000000000025', 4.5, 'cl', NULL, NULL) /* Gin */,
+    ((SELECT id FROM new_cocktail), 2, '00000000-0000-0000-0000-000000000009', 1.5, 'cl', 'Maraschino', NULL) /* Cherry liqueur */,
+    ((SELECT id FROM new_cocktail), 3, '00000000-0000-0000-0000-000000000031', 1.5, 'cl', NULL, NULL) /* Lemon juice */;
 
 -- Cocktail: Bellini
 WITH new_cocktail AS (
@@ -263,8 +263,8 @@ WITH new_cocktail AS (
 )
 INSERT INTO ingredients (cocktail_id, position, base_ingredient_id, amount, unit, label, special)
 VALUES
-    ((SELECT id FROM new_cocktail), 1, (SELECT id FROM base_ingredients WHERE slug=slugify('Prosecco')), 10, 'cl', NULL, NULL),
-    ((SELECT id FROM new_cocktail), 2, (SELECT id FROM base_ingredients WHERE slug=slugify('Peach puree')), 5, 'cl', NULL, NULL);
+    ((SELECT id FROM new_cocktail), 1, '00000000-0000-0000-0000-000000000041', 10, 'cl', NULL, NULL) /* Prosecco */,
+    ((SELECT id FROM new_cocktail), 2, '00000000-0000-0000-0000-000000000037', 5, 'cl', NULL, NULL) /* Peach puree */;
 
 -- Cocktail: Grasshopper
 WITH new_cocktail AS (
@@ -274,9 +274,9 @@ WITH new_cocktail AS (
 )
 INSERT INTO ingredients (cocktail_id, position, base_ingredient_id, amount, unit, label, special)
 VALUES
-    ((SELECT id FROM new_cocktail), 1, (SELECT id FROM base_ingredients WHERE slug=slugify('Créme liqueur')), 3, 'cl', 'White Créme de Cacao', NULL),
-    ((SELECT id FROM new_cocktail), 2, (SELECT id FROM base_ingredients WHERE slug=slugify('Créme liqueur')), 3, 'cl', 'Green Créme de Menthe', NULL),
-    ((SELECT id FROM new_cocktail), 3, (SELECT id FROM base_ingredients WHERE slug=slugify('Cream')), 3, 'cl', NULL, NULL);
+    ((SELECT id FROM new_cocktail), 1, '00000000-0000-0000-0000-000000000017', 3, 'cl', 'White Créme de Cacao', NULL) /* Créme liqueur */,
+    ((SELECT id FROM new_cocktail), 2, '00000000-0000-0000-0000-000000000017', 3, 'cl', 'Green Créme de Menthe', NULL) /* Créme liqueur */,
+    ((SELECT id FROM new_cocktail), 3, '00000000-0000-0000-0000-000000000015', 3, 'cl', NULL, NULL) /* Cream */;
 
 -- Cocktail: Tequila Sunrise
 WITH new_cocktail AS (
@@ -286,9 +286,9 @@ WITH new_cocktail AS (
 )
 INSERT INTO ingredients (cocktail_id, position, base_ingredient_id, amount, unit, label, special)
 VALUES
-    ((SELECT id FROM new_cocktail), 1, (SELECT id FROM base_ingredients WHERE slug=slugify('Tequila')), 4.5, 'cl', NULL, NULL),
-    ((SELECT id FROM new_cocktail), 2, (SELECT id FROM base_ingredients WHERE slug=slugify('Orange juice')), 9, 'cl', NULL, NULL),
-    ((SELECT id FROM new_cocktail), 3, (SELECT id FROM base_ingredients WHERE slug=slugify('Syrup')), 1.5, 'cl', 'Grenadine', NULL);
+    ((SELECT id FROM new_cocktail), 1, '00000000-0000-0000-0000-000000000046', 4.5, 'cl', NULL, NULL) /* Tequila */,
+    ((SELECT id FROM new_cocktail), 2, '00000000-0000-0000-0000-000000000036', 9, 'cl', NULL, NULL) /* Orange juice */,
+    ((SELECT id FROM new_cocktail), 3, '00000000-0000-0000-0000-000000000045', 1.5, 'cl', 'Grenadine', NULL) /* Syrup */;
 
 -- Cocktail: Daiquiri
 WITH new_cocktail AS (
@@ -298,9 +298,9 @@ WITH new_cocktail AS (
 )
 INSERT INTO ingredients (cocktail_id, position, base_ingredient_id, amount, unit, label, special)
 VALUES
-    ((SELECT id FROM new_cocktail), 1, (SELECT id FROM base_ingredients WHERE slug=slugify('White rum')), 4.5, 'cl', NULL, NULL),
-    ((SELECT id FROM new_cocktail), 2, (SELECT id FROM base_ingredients WHERE slug=slugify('Lime juice')), 2.5, 'cl', NULL, NULL),
-    ((SELECT id FROM new_cocktail), 3, (SELECT id FROM base_ingredients WHERE slug=slugify('Syrup')), 1.5, 'cl', 'Simple syrup', NULL);
+    ((SELECT id FROM new_cocktail), 1, '00000000-0000-0000-0000-000000000052', 4.5, 'cl', NULL, NULL) /* White rum */,
+    ((SELECT id FROM new_cocktail), 2, '00000000-0000-0000-0000-000000000033', 2.5, 'cl', NULL, NULL) /* Lime juice */,
+    ((SELECT id FROM new_cocktail), 3, '00000000-0000-0000-0000-000000000045', 1.5, 'cl', 'Simple syrup', NULL) /* Syrup */;
 
 -- Cocktail: Rusty Nail
 WITH new_cocktail AS (
@@ -310,8 +310,8 @@ WITH new_cocktail AS (
 )
 INSERT INTO ingredients (cocktail_id, position, base_ingredient_id, amount, unit, label, special)
 VALUES
-    ((SELECT id FROM new_cocktail), 1, (SELECT id FROM base_ingredients WHERE slug=slugify('Whiskey')), 4.5, 'cl', 'Scotch whisky', NULL),
-    ((SELECT id FROM new_cocktail), 2, (SELECT id FROM base_ingredients WHERE slug=slugify('Drambuie')), 2.5, 'cl', NULL, NULL);
+    ((SELECT id FROM new_cocktail), 1, '00000000-0000-0000-0000-000000000051', 4.5, 'cl', 'Scotch whisky', NULL) /* Whiskey */,
+    ((SELECT id FROM new_cocktail), 2, '00000000-0000-0000-0000-000000000021', 2.5, 'cl', NULL, NULL) /* Drambuie */;
 
 -- Cocktail: Stinger
 WITH new_cocktail AS (
@@ -321,8 +321,8 @@ WITH new_cocktail AS (
 )
 INSERT INTO ingredients (cocktail_id, position, base_ingredient_id, amount, unit, label, special)
 VALUES
-    ((SELECT id FROM new_cocktail), 1, (SELECT id FROM base_ingredients WHERE slug=slugify('Cognac')), 5, 'cl', NULL, NULL),
-    ((SELECT id FROM new_cocktail), 2, (SELECT id FROM base_ingredients WHERE slug=slugify('Créme liqueur')), 2, 'cl', 'White Créme de Menthe', NULL);
+    ((SELECT id FROM new_cocktail), 1, '00000000-0000-0000-0000-000000000012', 5, 'cl', NULL, NULL) /* Cognac */,
+    ((SELECT id FROM new_cocktail), 2, '00000000-0000-0000-0000-000000000017', 2, 'cl', 'White Créme de Menthe', NULL) /* Créme liqueur */;
 
 -- Cocktail: Golden Dream
 WITH new_cocktail AS (
@@ -332,10 +332,10 @@ WITH new_cocktail AS (
 )
 INSERT INTO ingredients (cocktail_id, position, base_ingredient_id, amount, unit, label, special)
 VALUES
-    ((SELECT id FROM new_cocktail), 1, (SELECT id FROM base_ingredients WHERE slug=slugify('Galliano')), 2, 'cl', NULL, NULL),
-    ((SELECT id FROM new_cocktail), 2, (SELECT id FROM base_ingredients WHERE slug=slugify('Triple Sec')), 2, 'cl', NULL, NULL),
-    ((SELECT id FROM new_cocktail), 3, (SELECT id FROM base_ingredients WHERE slug=slugify('Orange juice')), 2, 'cl', NULL, NULL),
-    ((SELECT id FROM new_cocktail), 4, (SELECT id FROM base_ingredients WHERE slug=slugify('Cream')), 1, 'cl', NULL, NULL);
+    ((SELECT id FROM new_cocktail), 1, '00000000-0000-0000-0000-000000000024', 2, 'cl', NULL, NULL) /* Galliano */,
+    ((SELECT id FROM new_cocktail), 2, '00000000-0000-0000-0000-000000000048', 2, 'cl', NULL, NULL) /* Triple Sec */,
+    ((SELECT id FROM new_cocktail), 3, '00000000-0000-0000-0000-000000000036', 2, 'cl', NULL, NULL) /* Orange juice */,
+    ((SELECT id FROM new_cocktail), 4, '00000000-0000-0000-0000-000000000015', 1, 'cl', NULL, NULL) /* Cream */;
 
 -- Cocktail: Bramble
 WITH new_cocktail AS (
@@ -345,10 +345,10 @@ WITH new_cocktail AS (
 )
 INSERT INTO ingredients (cocktail_id, position, base_ingredient_id, amount, unit, label, special)
 VALUES
-    ((SELECT id FROM new_cocktail), 1, (SELECT id FROM base_ingredients WHERE slug=slugify('Gin')), 4, 'cl', NULL, NULL),
-    ((SELECT id FROM new_cocktail), 2, (SELECT id FROM base_ingredients WHERE slug=slugify('Lemon juice')), 1.5, 'cl', NULL, NULL),
-    ((SELECT id FROM new_cocktail), 3, (SELECT id FROM base_ingredients WHERE slug=slugify('Syrup')), 1, 'cl', 'Sugar syrup', NULL),
-    ((SELECT id FROM new_cocktail), 4, (SELECT id FROM base_ingredients WHERE slug=slugify('Blackberry liqueur')), 1.5, 'cl', NULL, NULL);
+    ((SELECT id FROM new_cocktail), 1, '00000000-0000-0000-0000-000000000025', 4, 'cl', NULL, NULL) /* Gin */,
+    ((SELECT id FROM new_cocktail), 2, '00000000-0000-0000-0000-000000000031', 1.5, 'cl', NULL, NULL) /* Lemon juice */,
+    ((SELECT id FROM new_cocktail), 3, '00000000-0000-0000-0000-000000000045', 1, 'cl', 'Sugar syrup', NULL) /* Syrup */,
+    ((SELECT id FROM new_cocktail), 4, '00000000-0000-0000-0000-000000000004', 1.5, 'cl', NULL, NULL) /* Blackberry liqueur */;
 
 -- Cocktail: Alexander
 WITH new_cocktail AS (
@@ -358,9 +358,9 @@ WITH new_cocktail AS (
 )
 INSERT INTO ingredients (cocktail_id, position, base_ingredient_id, amount, unit, label, special)
 VALUES
-    ((SELECT id FROM new_cocktail), 1, (SELECT id FROM base_ingredients WHERE slug=slugify('Cognac')), 3, 'cl', NULL, NULL),
-    ((SELECT id FROM new_cocktail), 2, (SELECT id FROM base_ingredients WHERE slug=slugify('Créme liqueur')), 3, 'cl', 'Brown Créme de Cacao', NULL),
-    ((SELECT id FROM new_cocktail), 3, (SELECT id FROM base_ingredients WHERE slug=slugify('Cream')), 3, 'cl', NULL, NULL);
+    ((SELECT id FROM new_cocktail), 1, '00000000-0000-0000-0000-000000000012', 3, 'cl', NULL, NULL) /* Cognac */,
+    ((SELECT id FROM new_cocktail), 2, '00000000-0000-0000-0000-000000000017', 3, 'cl', 'Brown Créme de Cacao', NULL) /* Créme liqueur */,
+    ((SELECT id FROM new_cocktail), 3, '00000000-0000-0000-0000-000000000015', 3, 'cl', NULL, NULL) /* Cream */;
 
 -- Cocktail: Black Russian
 WITH new_cocktail AS (
@@ -370,8 +370,8 @@ WITH new_cocktail AS (
 )
 INSERT INTO ingredients (cocktail_id, position, base_ingredient_id, amount, unit, label, special)
 VALUES
-    ((SELECT id FROM new_cocktail), 1, (SELECT id FROM base_ingredients WHERE slug=slugify('Vodka')), 5, 'cl', NULL, NULL),
-    ((SELECT id FROM new_cocktail), 2, (SELECT id FROM base_ingredients WHERE slug=slugify('Coffee liqueur')), 2, 'cl', NULL, NULL);
+    ((SELECT id FROM new_cocktail), 1, '00000000-0000-0000-0000-000000000050', 5, 'cl', NULL, NULL) /* Vodka */,
+    ((SELECT id FROM new_cocktail), 2, '00000000-0000-0000-0000-000000000011', 2, 'cl', NULL, NULL) /* Coffee liqueur */;
 
 -- Cocktail: Bloody Mary
 WITH new_cocktail AS (
@@ -381,9 +381,9 @@ WITH new_cocktail AS (
 )
 INSERT INTO ingredients (cocktail_id, position, base_ingredient_id, amount, unit, label, special)
 VALUES
-    ((SELECT id FROM new_cocktail), 1, (SELECT id FROM base_ingredients WHERE slug=slugify('Vodka')), 4.5, 'cl', NULL, NULL),
-    ((SELECT id FROM new_cocktail), 2, (SELECT id FROM base_ingredients WHERE slug=slugify('Tomato juice')), 9, 'cl', NULL, NULL),
-    ((SELECT id FROM new_cocktail), 3, (SELECT id FROM base_ingredients WHERE slug=slugify('Lemon juice')), 1.5, 'cl', NULL, NULL);
+    ((SELECT id FROM new_cocktail), 1, '00000000-0000-0000-0000-000000000050', 4.5, 'cl', NULL, NULL) /* Vodka */,
+    ((SELECT id FROM new_cocktail), 2, '00000000-0000-0000-0000-000000000047', 9, 'cl', NULL, NULL) /* Tomato juice */,
+    ((SELECT id FROM new_cocktail), 3, '00000000-0000-0000-0000-000000000031', 1.5, 'cl', NULL, NULL) /* Lemon juice */;
 
 -- Cocktail: Sex on the Beach
 WITH new_cocktail AS (
@@ -393,10 +393,10 @@ WITH new_cocktail AS (
 )
 INSERT INTO ingredients (cocktail_id, position, base_ingredient_id, amount, unit, label, special)
 VALUES
-    ((SELECT id FROM new_cocktail), 1, (SELECT id FROM base_ingredients WHERE slug=slugify('Vodka')), 4, 'cl', NULL, NULL),
-    ((SELECT id FROM new_cocktail), 2, (SELECT id FROM base_ingredients WHERE slug=slugify('Peach schnapps')), 2, 'cl', NULL, NULL),
-    ((SELECT id FROM new_cocktail), 3, (SELECT id FROM base_ingredients WHERE slug=slugify('Cranberry juice')), 4, 'cl', NULL, NULL),
-    ((SELECT id FROM new_cocktail), 4, (SELECT id FROM base_ingredients WHERE slug=slugify('Orange juice')), 4, 'cl', NULL, NULL);
+    ((SELECT id FROM new_cocktail), 1, '00000000-0000-0000-0000-000000000050', 4, 'cl', NULL, NULL) /* Vodka */,
+    ((SELECT id FROM new_cocktail), 2, '00000000-0000-0000-0000-000000000038', 2, 'cl', NULL, NULL) /* Peach schnapps */,
+    ((SELECT id FROM new_cocktail), 3, '00000000-0000-0000-0000-000000000014', 4, 'cl', NULL, NULL) /* Cranberry juice */,
+    ((SELECT id FROM new_cocktail), 4, '00000000-0000-0000-0000-000000000036', 4, 'cl', NULL, NULL) /* Orange juice */;
 
 -- Cocktail: Monkey Gland
 WITH new_cocktail AS (
@@ -406,8 +406,8 @@ WITH new_cocktail AS (
 )
 INSERT INTO ingredients (cocktail_id, position, base_ingredient_id, amount, unit, label, special)
 VALUES
-    ((SELECT id FROM new_cocktail), 1, (SELECT id FROM base_ingredients WHERE slug=slugify('Gin')), 5, 'cl', NULL, NULL),
-    ((SELECT id FROM new_cocktail), 2, (SELECT id FROM base_ingredients WHERE slug=slugify('Orange juice')), 3, 'cl', NULL, NULL);
+    ((SELECT id FROM new_cocktail), 1, '00000000-0000-0000-0000-000000000025', 5, 'cl', NULL, NULL) /* Gin */,
+    ((SELECT id FROM new_cocktail), 2, '00000000-0000-0000-0000-000000000036', 3, 'cl', NULL, NULL) /* Orange juice */;
 
 -- Cocktail: Sidecar
 WITH new_cocktail AS (
@@ -417,9 +417,9 @@ WITH new_cocktail AS (
 )
 INSERT INTO ingredients (cocktail_id, position, base_ingredient_id, amount, unit, label, special)
 VALUES
-    ((SELECT id FROM new_cocktail), 1, (SELECT id FROM base_ingredients WHERE slug=slugify('Cognac')), 5, 'cl', NULL, NULL),
-    ((SELECT id FROM new_cocktail), 2, (SELECT id FROM base_ingredients WHERE slug=slugify('Triple Sec')), 2, 'cl', NULL, NULL),
-    ((SELECT id FROM new_cocktail), 3, (SELECT id FROM base_ingredients WHERE slug=slugify('Lemon juice')), 2, 'cl', NULL, NULL);
+    ((SELECT id FROM new_cocktail), 1, '00000000-0000-0000-0000-000000000012', 5, 'cl', NULL, NULL) /* Cognac */,
+    ((SELECT id FROM new_cocktail), 2, '00000000-0000-0000-0000-000000000048', 2, 'cl', NULL, NULL) /* Triple Sec */,
+    ((SELECT id FROM new_cocktail), 3, '00000000-0000-0000-0000-000000000031', 2, 'cl', NULL, NULL) /* Lemon juice */;
 
 -- Cocktail: Irish Coffee
 WITH new_cocktail AS (
@@ -429,9 +429,9 @@ WITH new_cocktail AS (
 )
 INSERT INTO ingredients (cocktail_id, position, base_ingredient_id, amount, unit, label, special)
 VALUES
-    ((SELECT id FROM new_cocktail), 1, (SELECT id FROM base_ingredients WHERE slug=slugify('Whiskey')), 4, 'cl', 'Irish whiskey', NULL),
-    ((SELECT id FROM new_cocktail), 2, (SELECT id FROM base_ingredients WHERE slug=slugify('Hot coffee')), 9, 'cl', NULL, NULL),
-    ((SELECT id FROM new_cocktail), 3, (SELECT id FROM base_ingredients WHERE slug=slugify('Cream')), 3, 'cl', NULL, NULL);
+    ((SELECT id FROM new_cocktail), 1, '00000000-0000-0000-0000-000000000051', 4, 'cl', 'Irish whiskey', NULL) /* Whiskey */,
+    ((SELECT id FROM new_cocktail), 2, '00000000-0000-0000-0000-000000000029', 9, 'cl', NULL, NULL) /* Hot coffee */,
+    ((SELECT id FROM new_cocktail), 3, '00000000-0000-0000-0000-000000000015', 3, 'cl', NULL, NULL) /* Cream */;
 
 -- Cocktail: Sazerac
 WITH new_cocktail AS (
@@ -441,8 +441,8 @@ WITH new_cocktail AS (
 )
 INSERT INTO ingredients (cocktail_id, position, base_ingredient_id, amount, unit, label, special)
 VALUES
-    ((SELECT id FROM new_cocktail), 1, (SELECT id FROM base_ingredients WHERE slug=slugify('Cognac')), 5, 'cl', NULL, NULL),
-    ((SELECT id FROM new_cocktail), 2, (SELECT id FROM base_ingredients WHERE slug=slugify('Absinthe')), 1, 'cl', NULL, NULL);
+    ((SELECT id FROM new_cocktail), 1, '00000000-0000-0000-0000-000000000012', 5, 'cl', NULL, NULL) /* Cognac */,
+    ((SELECT id FROM new_cocktail), 2, '00000000-0000-0000-0000-000000000001', 1, 'cl', NULL, NULL) /* Absinthe */;
 
 -- Cocktail: Americano
 WITH new_cocktail AS (
@@ -452,8 +452,8 @@ WITH new_cocktail AS (
 )
 INSERT INTO ingredients (cocktail_id, position, base_ingredient_id, amount, unit, label, special)
 VALUES
-    ((SELECT id FROM new_cocktail), 1, (SELECT id FROM base_ingredients WHERE slug=slugify('Campari')), 3, 'cl', NULL, NULL),
-    ((SELECT id FROM new_cocktail), 2, (SELECT id FROM base_ingredients WHERE slug=slugify('Vermouth')), 3, 'cl', 'Red vermouth', NULL);
+    ((SELECT id FROM new_cocktail), 1, '00000000-0000-0000-0000-000000000007', 3, 'cl', NULL, NULL) /* Campari */,
+    ((SELECT id FROM new_cocktail), 2, '00000000-0000-0000-0000-000000000049', 3, 'cl', 'Red vermouth', NULL) /* Vermouth */;
 
 -- Cocktail: Singapore Sling
 WITH new_cocktail AS (
@@ -463,13 +463,13 @@ WITH new_cocktail AS (
 )
 INSERT INTO ingredients (cocktail_id, position, base_ingredient_id, amount, unit, label, special)
 VALUES
-    ((SELECT id FROM new_cocktail), 1, (SELECT id FROM base_ingredients WHERE slug=slugify('Gin')), 3, 'cl', NULL, NULL),
-    ((SELECT id FROM new_cocktail), 2, (SELECT id FROM base_ingredients WHERE slug=slugify('Cherry liqueur')), 1.5, 'cl', NULL, NULL),
-    ((SELECT id FROM new_cocktail), 3, (SELECT id FROM base_ingredients WHERE slug=slugify('Triple Sec')), 0.75, 'cl', 'Cointreau', NULL),
-    ((SELECT id FROM new_cocktail), 4, (SELECT id FROM base_ingredients WHERE slug=slugify('DOM Bénédictine')), 0.75, 'cl', NULL, NULL),
-    ((SELECT id FROM new_cocktail), 5, (SELECT id FROM base_ingredients WHERE slug=slugify('Pineapple juice')), 12.0, 'cl', NULL, NULL),
-    ((SELECT id FROM new_cocktail), 6, (SELECT id FROM base_ingredients WHERE slug=slugify('Lime juice')), 1.5, 'cl', NULL, NULL),
-    ((SELECT id FROM new_cocktail), 7, (SELECT id FROM base_ingredients WHERE slug=slugify('Syrup')), 1, 'cl', 'Grenadine', NULL);
+    ((SELECT id FROM new_cocktail), 1, '00000000-0000-0000-0000-000000000025', 3, 'cl', NULL, NULL) /* Gin */,
+    ((SELECT id FROM new_cocktail), 2, '00000000-0000-0000-0000-000000000009', 1.5, 'cl', NULL, NULL) /* Cherry liqueur */,
+    ((SELECT id FROM new_cocktail), 3, '00000000-0000-0000-0000-000000000048', 0.75, 'cl', 'Cointreau', NULL) /* Triple Sec */,
+    ((SELECT id FROM new_cocktail), 4, '00000000-0000-0000-0000-000000000020', 0.75, 'cl', NULL, NULL) /* DOM Bénédictine */,
+    ((SELECT id FROM new_cocktail), 5, '00000000-0000-0000-0000-000000000039', 12.0, 'cl', NULL, NULL) /* Pineapple juice */,
+    ((SELECT id FROM new_cocktail), 6, '00000000-0000-0000-0000-000000000033', 1.5, 'cl', NULL, NULL) /* Lime juice */,
+    ((SELECT id FROM new_cocktail), 7, '00000000-0000-0000-0000-000000000045', 1, 'cl', 'Grenadine', NULL) /* Syrup */;
 
 -- Cocktail: Moscow Mule
 WITH new_cocktail AS (
@@ -479,9 +479,9 @@ WITH new_cocktail AS (
 )
 INSERT INTO ingredients (cocktail_id, position, base_ingredient_id, amount, unit, label, special)
 VALUES
-    ((SELECT id FROM new_cocktail), 1, (SELECT id FROM base_ingredients WHERE slug=slugify('Vodka')), 4.5, 'cl', NULL, NULL),
-    ((SELECT id FROM new_cocktail), 2, (SELECT id FROM base_ingredients WHERE slug=slugify('Ginger beer')), 12, 'cl', NULL, NULL),
-    ((SELECT id FROM new_cocktail), 3, (SELECT id FROM base_ingredients WHERE slug=slugify('Lime juice')), 0.5, 'cl', NULL, NULL);
+    ((SELECT id FROM new_cocktail), 1, '00000000-0000-0000-0000-000000000050', 4.5, 'cl', NULL, NULL) /* Vodka */,
+    ((SELECT id FROM new_cocktail), 2, '00000000-0000-0000-0000-000000000027', 12, 'cl', NULL, NULL) /* Ginger beer */,
+    ((SELECT id FROM new_cocktail), 3, '00000000-0000-0000-0000-000000000033', 0.5, 'cl', NULL, NULL) /* Lime juice */;
 
 -- Cocktail: John Collins
 WITH new_cocktail AS (
@@ -491,10 +491,10 @@ WITH new_cocktail AS (
 )
 INSERT INTO ingredients (cocktail_id, position, base_ingredient_id, amount, unit, label, special)
 VALUES
-    ((SELECT id FROM new_cocktail), 1, (SELECT id FROM base_ingredients WHERE slug=slugify('Gin')), 4.5, 'cl', NULL, NULL),
-    ((SELECT id FROM new_cocktail), 2, (SELECT id FROM base_ingredients WHERE slug=slugify('Lemon juice')), 3, 'cl', NULL, NULL),
-    ((SELECT id FROM new_cocktail), 3, (SELECT id FROM base_ingredients WHERE slug=slugify('Syrup')), 1.5, 'cl', 'Sugar syrup', NULL),
-    ((SELECT id FROM new_cocktail), 4, (SELECT id FROM base_ingredients WHERE slug=slugify('Soda water')), 6, 'cl', NULL, NULL);
+    ((SELECT id FROM new_cocktail), 1, '00000000-0000-0000-0000-000000000025', 4.5, 'cl', NULL, NULL) /* Gin */,
+    ((SELECT id FROM new_cocktail), 2, '00000000-0000-0000-0000-000000000031', 3, 'cl', NULL, NULL) /* Lemon juice */,
+    ((SELECT id FROM new_cocktail), 3, '00000000-0000-0000-0000-000000000045', 1.5, 'cl', 'Sugar syrup', NULL) /* Syrup */,
+    ((SELECT id FROM new_cocktail), 4, '00000000-0000-0000-0000-000000000044', 6, 'cl', NULL, NULL) /* Soda water */;
 
 -- Cocktail: Kir
 WITH new_cocktail AS (
@@ -504,8 +504,8 @@ WITH new_cocktail AS (
 )
 INSERT INTO ingredients (cocktail_id, position, base_ingredient_id, amount, unit, label, special)
 VALUES
-    ((SELECT id FROM new_cocktail), 1, (SELECT id FROM base_ingredients WHERE slug=slugify('Dry White Wine')), 9, 'cl', NULL, NULL),
-    ((SELECT id FROM new_cocktail), 2, (SELECT id FROM base_ingredients WHERE slug=slugify('Créme liqueur')), 1, 'cl', 'Créme de Cassis', NULL);
+    ((SELECT id FROM new_cocktail), 1, '00000000-0000-0000-0000-000000000022', 9, 'cl', NULL, NULL) /* Dry White Wine */,
+    ((SELECT id FROM new_cocktail), 2, '00000000-0000-0000-0000-000000000017', 1, 'cl', 'Créme de Cassis', NULL) /* Créme liqueur */;
 
 -- Cocktail: Mint Julep
 WITH new_cocktail AS (
@@ -515,7 +515,7 @@ WITH new_cocktail AS (
 )
 INSERT INTO ingredients (cocktail_id, position, base_ingredient_id, amount, unit, label, special)
 VALUES
-    ((SELECT id FROM new_cocktail), 1, (SELECT id FROM base_ingredients WHERE slug=slugify('Whiskey')), 6, 'cl', 'Bourbon whiskey', NULL);
+    ((SELECT id FROM new_cocktail), 1, '00000000-0000-0000-0000-000000000051', 6, 'cl', 'Bourbon whiskey', NULL) /* Whiskey */;
 
 -- Cocktail: Paradise
 WITH new_cocktail AS (
@@ -525,9 +525,9 @@ WITH new_cocktail AS (
 )
 INSERT INTO ingredients (cocktail_id, position, base_ingredient_id, amount, unit, label, special)
 VALUES
-    ((SELECT id FROM new_cocktail), 1, (SELECT id FROM base_ingredients WHERE slug=slugify('Gin')), 3.5, 'cl', NULL, NULL),
-    ((SELECT id FROM new_cocktail), 2, (SELECT id FROM base_ingredients WHERE slug=slugify('Apricot brandy')), 2, 'cl', NULL, NULL),
-    ((SELECT id FROM new_cocktail), 3, (SELECT id FROM base_ingredients WHERE slug=slugify('Orange juice')), 1.5, 'cl', NULL, NULL);
+    ((SELECT id FROM new_cocktail), 1, '00000000-0000-0000-0000-000000000025', 3.5, 'cl', NULL, NULL) /* Gin */,
+    ((SELECT id FROM new_cocktail), 2, '00000000-0000-0000-0000-000000000003', 2, 'cl', NULL, NULL) /* Apricot brandy */,
+    ((SELECT id FROM new_cocktail), 3, '00000000-0000-0000-0000-000000000036', 1.5, 'cl', NULL, NULL) /* Orange juice */;
 
 -- Cocktail: Champagne Cocktail
 WITH new_cocktail AS (
@@ -537,8 +537,8 @@ WITH new_cocktail AS (
 )
 INSERT INTO ingredients (cocktail_id, position, base_ingredient_id, amount, unit, label, special)
 VALUES
-    ((SELECT id FROM new_cocktail), 1, (SELECT id FROM base_ingredients WHERE slug=slugify('Champagne')), 9, 'cl', NULL, NULL),
-    ((SELECT id FROM new_cocktail), 2, (SELECT id FROM base_ingredients WHERE slug=slugify('Cognac')), 1, 'cl', NULL, NULL);
+    ((SELECT id FROM new_cocktail), 1, '00000000-0000-0000-0000-000000000008', 9, 'cl', NULL, NULL) /* Champagne */,
+    ((SELECT id FROM new_cocktail), 2, '00000000-0000-0000-0000-000000000012', 1, 'cl', NULL, NULL) /* Cognac */;
 
 -- Cocktail: Mary Pickford
 WITH new_cocktail AS (
@@ -548,10 +548,10 @@ WITH new_cocktail AS (
 )
 INSERT INTO ingredients (cocktail_id, position, base_ingredient_id, amount, unit, label, special)
 VALUES
-    ((SELECT id FROM new_cocktail), 1, (SELECT id FROM base_ingredients WHERE slug=slugify('White rum')), 6, 'cl', NULL, NULL),
-    ((SELECT id FROM new_cocktail), 2, (SELECT id FROM base_ingredients WHERE slug=slugify('Cherry liqueur')), 1, 'cl', 'Maraschino', NULL),
-    ((SELECT id FROM new_cocktail), 3, (SELECT id FROM base_ingredients WHERE slug=slugify('Pineapple juice')), 6, 'cl', NULL, NULL),
-    ((SELECT id FROM new_cocktail), 4, (SELECT id FROM base_ingredients WHERE slug=slugify('Syrup')), 1, 'cl', 'Grenadine', NULL);
+    ((SELECT id FROM new_cocktail), 1, '00000000-0000-0000-0000-000000000052', 6, 'cl', NULL, NULL) /* White rum */,
+    ((SELECT id FROM new_cocktail), 2, '00000000-0000-0000-0000-000000000009', 1, 'cl', 'Maraschino', NULL) /* Cherry liqueur */,
+    ((SELECT id FROM new_cocktail), 3, '00000000-0000-0000-0000-000000000039', 6, 'cl', NULL, NULL) /* Pineapple juice */,
+    ((SELECT id FROM new_cocktail), 4, '00000000-0000-0000-0000-000000000045', 1, 'cl', 'Grenadine', NULL) /* Syrup */;
 
 -- Cocktail: Hemingway Special
 WITH new_cocktail AS (
@@ -561,10 +561,10 @@ WITH new_cocktail AS (
 )
 INSERT INTO ingredients (cocktail_id, position, base_ingredient_id, amount, unit, label, special)
 VALUES
-    ((SELECT id FROM new_cocktail), 1, (SELECT id FROM base_ingredients WHERE slug=slugify('White rum')), 6, 'cl', NULL, NULL),
-    ((SELECT id FROM new_cocktail), 2, (SELECT id FROM base_ingredients WHERE slug=slugify('Grapefruit juice')), 4, 'cl', NULL, NULL),
-    ((SELECT id FROM new_cocktail), 3, (SELECT id FROM base_ingredients WHERE slug=slugify('Cherry liqueur')), 1.5, 'cl', 'Maraschino', NULL),
-    ((SELECT id FROM new_cocktail), 4, (SELECT id FROM base_ingredients WHERE slug=slugify('Lime juice')), 1.5, 'cl', NULL, NULL);
+    ((SELECT id FROM new_cocktail), 1, '00000000-0000-0000-0000-000000000052', 6, 'cl', NULL, NULL) /* White rum */,
+    ((SELECT id FROM new_cocktail), 2, '00000000-0000-0000-0000-000000000028', 4, 'cl', NULL, NULL) /* Grapefruit juice */,
+    ((SELECT id FROM new_cocktail), 3, '00000000-0000-0000-0000-000000000009', 1.5, 'cl', 'Maraschino', NULL) /* Cherry liqueur */,
+    ((SELECT id FROM new_cocktail), 4, '00000000-0000-0000-0000-000000000033', 1.5, 'cl', NULL, NULL) /* Lime juice */;
 
 -- Cocktail: Dark 'n' Stormy
 WITH new_cocktail AS (
@@ -574,8 +574,8 @@ WITH new_cocktail AS (
 )
 INSERT INTO ingredients (cocktail_id, position, base_ingredient_id, amount, unit, label, special)
 VALUES
-    ((SELECT id FROM new_cocktail), 1, (SELECT id FROM base_ingredients WHERE slug=slugify('Dark rum')), 6, 'cl', NULL, NULL),
-    ((SELECT id FROM new_cocktail), 2, (SELECT id FROM base_ingredients WHERE slug=slugify('Ginger beer')), 10, 'cl', NULL, NULL);
+    ((SELECT id FROM new_cocktail), 1, '00000000-0000-0000-0000-000000000018', 6, 'cl', NULL, NULL) /* Dark rum */,
+    ((SELECT id FROM new_cocktail), 2, '00000000-0000-0000-0000-000000000027', 10, 'cl', NULL, NULL) /* Ginger beer */;
 
 -- Cocktail: Russian Spring Punch
 WITH new_cocktail AS (
@@ -585,10 +585,10 @@ WITH new_cocktail AS (
 )
 INSERT INTO ingredients (cocktail_id, position, base_ingredient_id, amount, unit, label, special)
 VALUES
-    ((SELECT id FROM new_cocktail), 1, (SELECT id FROM base_ingredients WHERE slug=slugify('Vodka')), 2.5, 'cl', NULL, NULL),
-    ((SELECT id FROM new_cocktail), 2, (SELECT id FROM base_ingredients WHERE slug=slugify('Lemon juice')), 2.5, 'cl', NULL, NULL),
-    ((SELECT id FROM new_cocktail), 3, (SELECT id FROM base_ingredients WHERE slug=slugify('Créme liqueur')), 1.5, 'cl', 'Créme de Cassis', NULL),
-    ((SELECT id FROM new_cocktail), 4, (SELECT id FROM base_ingredients WHERE slug=slugify('Syrup')), 1, 'cl', 'Sugar syrup', NULL);
+    ((SELECT id FROM new_cocktail), 1, '00000000-0000-0000-0000-000000000050', 2.5, 'cl', NULL, NULL) /* Vodka */,
+    ((SELECT id FROM new_cocktail), 2, '00000000-0000-0000-0000-000000000031', 2.5, 'cl', NULL, NULL) /* Lemon juice */,
+    ((SELECT id FROM new_cocktail), 3, '00000000-0000-0000-0000-000000000017', 1.5, 'cl', 'Créme de Cassis', NULL) /* Créme liqueur */,
+    ((SELECT id FROM new_cocktail), 4, '00000000-0000-0000-0000-000000000045', 1, 'cl', 'Sugar syrup', NULL) /* Syrup */;
 
 -- Cocktail: Cosmopolitan
 WITH new_cocktail AS (
@@ -598,10 +598,10 @@ WITH new_cocktail AS (
 )
 INSERT INTO ingredients (cocktail_id, position, base_ingredient_id, amount, unit, label, special)
 VALUES
-    ((SELECT id FROM new_cocktail), 1, (SELECT id FROM base_ingredients WHERE slug=slugify('Vodka')), 4, 'cl', 'Citron Vodka', NULL),
-    ((SELECT id FROM new_cocktail), 2, (SELECT id FROM base_ingredients WHERE slug=slugify('Triple Sec')), 1.5, 'cl', 'Cointreau', NULL),
-    ((SELECT id FROM new_cocktail), 3, (SELECT id FROM base_ingredients WHERE slug=slugify('Lime juice')), 1.5, 'cl', NULL, NULL),
-    ((SELECT id FROM new_cocktail), 4, (SELECT id FROM base_ingredients WHERE slug=slugify('Cranberry juice')), 3, 'cl', NULL, NULL);
+    ((SELECT id FROM new_cocktail), 1, '00000000-0000-0000-0000-000000000050', 4, 'cl', 'Citron Vodka', NULL) /* Vodka */,
+    ((SELECT id FROM new_cocktail), 2, '00000000-0000-0000-0000-000000000048', 1.5, 'cl', 'Cointreau', NULL) /* Triple Sec */,
+    ((SELECT id FROM new_cocktail), 3, '00000000-0000-0000-0000-000000000033', 1.5, 'cl', NULL, NULL) /* Lime juice */,
+    ((SELECT id FROM new_cocktail), 4, '00000000-0000-0000-0000-000000000014', 3, 'cl', NULL, NULL) /* Cranberry juice */;
 
 -- Cocktail: Dry Martini
 WITH new_cocktail AS (
@@ -611,8 +611,8 @@ WITH new_cocktail AS (
 )
 INSERT INTO ingredients (cocktail_id, position, base_ingredient_id, amount, unit, label, special)
 VALUES
-    ((SELECT id FROM new_cocktail), 1, (SELECT id FROM base_ingredients WHERE slug=slugify('Gin')), 6, 'cl', NULL, NULL),
-    ((SELECT id FROM new_cocktail), 2, (SELECT id FROM base_ingredients WHERE slug=slugify('Vermouth')), 1, 'cl', 'Dry vermouth', NULL);
+    ((SELECT id FROM new_cocktail), 1, '00000000-0000-0000-0000-000000000025', 6, 'cl', NULL, NULL) /* Gin */,
+    ((SELECT id FROM new_cocktail), 2, '00000000-0000-0000-0000-000000000049', 1, 'cl', 'Dry vermouth', NULL) /* Vermouth */;
 
 -- Cocktail: Between the Sheets
 WITH new_cocktail AS (
@@ -622,10 +622,10 @@ WITH new_cocktail AS (
 )
 INSERT INTO ingredients (cocktail_id, position, base_ingredient_id, amount, unit, label, special)
 VALUES
-    ((SELECT id FROM new_cocktail), 1, (SELECT id FROM base_ingredients WHERE slug=slugify('White rum')), 3, 'cl', NULL, NULL),
-    ((SELECT id FROM new_cocktail), 2, (SELECT id FROM base_ingredients WHERE slug=slugify('Cognac')), 3, 'cl', NULL, NULL),
-    ((SELECT id FROM new_cocktail), 3, (SELECT id FROM base_ingredients WHERE slug=slugify('Triple Sec')), 3, 'cl', NULL, NULL),
-    ((SELECT id FROM new_cocktail), 4, (SELECT id FROM base_ingredients WHERE slug=slugify('Lemon juice')), 2, 'cl', NULL, NULL);
+    ((SELECT id FROM new_cocktail), 1, '00000000-0000-0000-0000-000000000052', 3, 'cl', NULL, NULL) /* White rum */,
+    ((SELECT id FROM new_cocktail), 2, '00000000-0000-0000-0000-000000000012', 3, 'cl', NULL, NULL) /* Cognac */,
+    ((SELECT id FROM new_cocktail), 3, '00000000-0000-0000-0000-000000000048', 3, 'cl', NULL, NULL) /* Triple Sec */,
+    ((SELECT id FROM new_cocktail), 4, '00000000-0000-0000-0000-000000000031', 2, 'cl', NULL, NULL) /* Lemon juice */;
 
 -- Cocktail: Casino
 WITH new_cocktail AS (
@@ -635,10 +635,10 @@ WITH new_cocktail AS (
 )
 INSERT INTO ingredients (cocktail_id, position, base_ingredient_id, amount, unit, label, special)
 VALUES
-    ((SELECT id FROM new_cocktail), 1, (SELECT id FROM base_ingredients WHERE slug=slugify('Gin')), 4, 'cl', 'Old Tom Gin', NULL),
-    ((SELECT id FROM new_cocktail), 2, (SELECT id FROM base_ingredients WHERE slug=slugify('Cherry liqueur')), 1, 'cl', 'Maraschino', NULL),
-    ((SELECT id FROM new_cocktail), 3, (SELECT id FROM base_ingredients WHERE slug=slugify('Orange Bitters')), 1, 'cl', NULL, NULL),
-    ((SELECT id FROM new_cocktail), 4, (SELECT id FROM base_ingredients WHERE slug=slugify('Lemon juice')), 1, 'cl', NULL, NULL);
+    ((SELECT id FROM new_cocktail), 1, '00000000-0000-0000-0000-000000000025', 4, 'cl', 'Old Tom Gin', NULL) /* Gin */,
+    ((SELECT id FROM new_cocktail), 2, '00000000-0000-0000-0000-000000000009', 1, 'cl', 'Maraschino', NULL) /* Cherry liqueur */,
+    ((SELECT id FROM new_cocktail), 3, '00000000-0000-0000-0000-000000000035', 1, 'cl', NULL, NULL) /* Orange Bitters */,
+    ((SELECT id FROM new_cocktail), 4, '00000000-0000-0000-0000-000000000031', 1, 'cl', NULL, NULL) /* Lemon juice */;
 
 -- Cocktail: Caipirinha
 WITH new_cocktail AS (
@@ -648,7 +648,7 @@ WITH new_cocktail AS (
 )
 INSERT INTO ingredients (cocktail_id, position, base_ingredient_id, amount, unit, label, special)
 VALUES
-    ((SELECT id FROM new_cocktail), 1, (SELECT id FROM base_ingredients WHERE slug=slugify('Cachaca')), 5, 'cl', NULL, NULL);
+    ((SELECT id FROM new_cocktail), 1, '00000000-0000-0000-0000-000000000005', 5, 'cl', NULL, NULL) /* Cachaca */;
 
 -- Cocktail: Harvey Wallbanger
 WITH new_cocktail AS (
@@ -658,6 +658,6 @@ WITH new_cocktail AS (
 )
 INSERT INTO ingredients (cocktail_id, position, base_ingredient_id, amount, unit, label, special)
 VALUES
-    ((SELECT id FROM new_cocktail), 1, (SELECT id FROM base_ingredients WHERE slug=slugify('Vodka')), 4.5, 'cl', NULL, NULL),
-    ((SELECT id FROM new_cocktail), 2, (SELECT id FROM base_ingredients WHERE slug=slugify('Galliano')), 1.5, 'cl', NULL, NULL),
-    ((SELECT id FROM new_cocktail), 3, (SELECT id FROM base_ingredients WHERE slug=slugify('Orange juice')), 9, 'cl', NULL, NULL);
+    ((SELECT id FROM new_cocktail), 1, '00000000-0000-0000-0000-000000000050', 4.5, 'cl', NULL, NULL) /* Vodka */,
+    ((SELECT id FROM new_cocktail), 2, '00000000-0000-0000-0000-000000000024', 1.5, 'cl', NULL, NULL) /* Galliano */,
+    ((SELECT id FROM new_cocktail), 3, '00000000-0000-0000-0000-000000000036', 9, 'cl', NULL, NULL) /* Orange juice */;

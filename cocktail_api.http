@@ -1,1 +1,1 @@
-GET http://localhost:8080/cocktails
+GET http://localhost:8080/api/cocktails

@@ -55,6 +55,52 @@ FROM (
          GROUP BY c.id, c.slug, c.name, c.glass, c.category, c.garnish, c.preparation, c.image_url
      ) AS cocktail_data;`
 
+const randomCocktailQuery = `SELECT COALESCE(
+        JSON_BUILD_OBJECT(
+                'id', cocktail_data.id,
+                'slug', cocktail_data.slug,
+                'name', cocktail_data.name,
+                'glass', cocktail_data.glass,
+                'category', cocktail_data.category,
+                'garnish', cocktail_data.garnish,
+                'preparation', cocktail_data.preparation,
+                'image_url', cocktail_data.image_url,
+                'ingredients', cocktail_data.ingredients
+        ), '{}'::json) AS cocktail_json
+FROM (
+        SELECT
+            c.id,
+            c.slug,
+            c.name,
+            c.glass,
+            c.category,
+            c.garnish,
+            c.preparation,
+            c.image_url,
+            JSON_AGG(
+                    JSON_BUILD_OBJECT(
+                            'position', i.position,
+                            'amount', i.amount,
+                            'unit', i.unit,
+                            'label', i.label,
+                            'special', i.special,
+                            'base_ingredient', JSON_BUILD_OBJECT(
+                                    'id', bi.id,
+                                    'slug', bi.slug,
+                                    'name', bi.name,
+                                    'abv', bi.abv,
+                                    'taste', bi.taste
+                                                   )
+                    ) ORDER BY i.position
+            ) AS ingredients
+        FROM cocktails c
+                 LEFT JOIN ingredients i ON c.id = i.cocktail_id
+                 LEFT JOIN base_ingredients bi ON i.base_ingredient_id = bi.id
+        GROUP BY c.id, c.slug, c.name, c.glass, c.category, c.garnish, c.preparation, c.image_url
+        ORDER BY RANDOM()
+        LIMIT 1
+) AS cocktail_data;`
+
 func main() {
 	connStr := os.Getenv("DATABASE_URL")
 	if connStr == "" {
@@ -70,7 +116,8 @@ func main() {
 	}
 	defer pool.Close()
 
-	http.HandleFunc("/cocktails", cocktailsHandler(pool))
+	http.HandleFunc("/api/cocktails", cocktailsHandler(pool))
+	http.HandleFunc("/api/cocktails/random", randomCocktailHandler(pool))
 
 	port := os.Getenv("PORT")
 	if port == "" {
@@ -95,6 +142,29 @@ func cocktailsHandler(pool *pgxpool.Pool) http.HandlerFunc {
 
 		var jsonData []byte
 		err := pool.QueryRow(ctx, cocktailsQuery).Scan(&jsonData)
+		if err != nil {
+			log.Printf("query error: %v", err)
+			http.Error(w, "internal server error", http.StatusInternalServerError)
+			return
+		}
+
+		w.Header().Set("Content-Type", "application/json")
+		w.Write(jsonData)
+	}
+}
+
+func randomCocktailHandler(pool *pgxpool.Pool) http.HandlerFunc {
+	return func(w http.ResponseWriter, r *http.Request) {
+		if r.Method != http.MethodGet {
+			http.Error(w, "method not allowed", http.StatusMethodNotAllowed)
+			return
+		}
+
+		ctx, cancel := context.WithTimeout(r.Context(), 5*time.Second)
+		defer cancel()
+
+		var jsonData []byte
+		err := pool.QueryRow(ctx, randomCocktailQuery).Scan(&jsonData)
 		if err != nil {
 			log.Printf("query error: %v", err)
 			http.Error(w, "internal server error", http.StatusInternalServerError)

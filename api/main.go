@@ -10,95 +10,72 @@ import (
 	"github.com/jackc/pgx/v5/pgxpool"
 )
 
+// Shared inner query to build cocktail rows with aggregated ingredients.
+const cocktailRowsQuery = `SELECT
+    c.id,
+    c.slug,
+    c.name,
+    c.glass,
+    c.category,
+    c.garnish,
+    c.preparation,
+    c.image_url,
+    JSON_AGG(
+        JSON_BUILD_OBJECT(
+            'position', i.position,
+            'amount', i.amount,
+            'unit', i.unit,
+            'label', i.label,
+            'special', i.special,
+            'base_ingredient', JSON_BUILD_OBJECT(
+                'id', bi.id,
+                'slug', bi.slug,
+                'name', bi.name,
+                'abv', bi.abv,
+                'taste', bi.taste
+            )
+        ) ORDER BY i.position
+    ) AS ingredients
+FROM cocktails c
+LEFT JOIN ingredients i ON c.id = i.cocktail_id
+LEFT JOIN base_ingredients bi ON i.base_ingredient_id = bi.id
+GROUP BY c.id, c.slug, c.name, c.glass, c.category, c.garnish, c.preparation, c.image_url`
+
+// Query for all cocktails ordered by name (as JSON array).
 const cocktailsQuery = `SELECT COALESCE(JSON_AGG(
-               JSON_BUILD_OBJECT(
-                       'id', cocktail_data.id,
-                       'slug', cocktail_data.slug,
-                       'name', cocktail_data.name,
-                       'glass', cocktail_data.glass,
-                       'category', cocktail_data.category,
-                       'garnish', cocktail_data.garnish,
-                       'preparation', cocktail_data.preparation,
-                       'image_url', cocktail_data.image_url,
-                       'ingredients', cocktail_data.ingredients
-               ) ORDER BY cocktail_data.name
+           JSON_BUILD_OBJECT(
+               'id', cocktail_data.id,
+               'slug', cocktail_data.slug,
+               'name', cocktail_data.name,
+               'glass', cocktail_data.glass,
+               'category', cocktail_data.category,
+               'garnish', cocktail_data.garnish,
+               'preparation', cocktail_data.preparation,
+               'image_url', cocktail_data.image_url,
+               'ingredients', cocktail_data.ingredients
+           ) ORDER BY cocktail_data.name
        ), '[]'::json) AS cocktails_json
 FROM (
-         SELECT
-             c.id,
-             c.slug,
-             c.name,
-             c.glass,
-             c.category,
-             c.garnish,
-             c.preparation,
-             c.image_url,
-             JSON_AGG(
-                     JSON_BUILD_OBJECT(
-                             'position', i.position,
-                             'amount', i.amount,
-                             'unit', i.unit,
-                             'label', i.label,
-                             'special', i.special,
-                             'base_ingredient', JSON_BUILD_OBJECT(
-                                     'id', bi.id,
-                                     'slug', bi.slug,
-                                     'name', bi.name,
-                                     'abv', bi.abv,
-                                     'taste', bi.taste
-                                                )
-                     ) ORDER BY i.position
-             ) AS ingredients
-         FROM cocktails c
-                  LEFT JOIN ingredients i ON c.id = i.cocktail_id
-                  LEFT JOIN base_ingredients bi ON i.base_ingredient_id = bi.id
-         GROUP BY c.id, c.slug, c.name, c.glass, c.category, c.garnish, c.preparation, c.image_url
-     ) AS cocktail_data;`
+    ` + cocktailRowsQuery + `
+) AS cocktail_data;`
 
+// Query for a single random cocktail (as JSON object).
 const randomCocktailQuery = `SELECT COALESCE(
-        JSON_BUILD_OBJECT(
-                'id', cocktail_data.id,
-                'slug', cocktail_data.slug,
-                'name', cocktail_data.name,
-                'glass', cocktail_data.glass,
-                'category', cocktail_data.category,
-                'garnish', cocktail_data.garnish,
-                'preparation', cocktail_data.preparation,
-                'image_url', cocktail_data.image_url,
-                'ingredients', cocktail_data.ingredients
-        ), '{}'::json) AS cocktail_json
+           JSON_BUILD_OBJECT(
+               'id', cocktail_data.id,
+               'slug', cocktail_data.slug,
+               'name', cocktail_data.name,
+               'glass', cocktail_data.glass,
+               'category', cocktail_data.category,
+               'garnish', cocktail_data.garnish,
+               'preparation', cocktail_data.preparation,
+               'image_url', cocktail_data.image_url,
+               'ingredients', cocktail_data.ingredients
+           ), '{}'::json) AS cocktail_json
 FROM (
-        SELECT
-            c.id,
-            c.slug,
-            c.name,
-            c.glass,
-            c.category,
-            c.garnish,
-            c.preparation,
-            c.image_url,
-            JSON_AGG(
-                    JSON_BUILD_OBJECT(
-                            'position', i.position,
-                            'amount', i.amount,
-                            'unit', i.unit,
-                            'label', i.label,
-                            'special', i.special,
-                            'base_ingredient', JSON_BUILD_OBJECT(
-                                    'id', bi.id,
-                                    'slug', bi.slug,
-                                    'name', bi.name,
-                                    'abv', bi.abv,
-                                    'taste', bi.taste
-                                                   )
-                    ) ORDER BY i.position
-            ) AS ingredients
-        FROM cocktails c
-                 LEFT JOIN ingredients i ON c.id = i.cocktail_id
-                 LEFT JOIN base_ingredients bi ON i.base_ingredient_id = bi.id
-        GROUP BY c.id, c.slug, c.name, c.glass, c.category, c.garnish, c.preparation, c.image_url
-        ORDER BY RANDOM()
-        LIMIT 1
+    ` + cocktailRowsQuery + `
+    ORDER BY RANDOM()
+    LIMIT 1
 ) AS cocktail_data;`
 
 func main() {

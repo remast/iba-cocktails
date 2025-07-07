@@ -7,6 +7,7 @@ import (
 	"os"
 	"time"
 
+	"github.com/go-chi/cors"
 	"github.com/jackc/pgx/v5/pgxpool"
 )
 
@@ -93,8 +94,13 @@ func main() {
 	}
 	defer pool.Close()
 
-	http.HandleFunc("/api/cocktails", cocktailsHandler(pool))
-	http.HandleFunc("/api/cocktails/random", randomCocktailHandler(pool))
+	// Build a ServeMux and apply go-chi/cors to allow all origins.
+	mux := http.NewServeMux()
+	mux.Handle("GET /api/cocktails", cocktailsHandler(pool))
+	mux.Handle("GET /api/cocktails/random", randomCocktailHandler(pool))
+
+	// Allow all cross-origin requests.
+	handler := cors.AllowAll().Handler(mux)
 
 	port := os.Getenv("PORT")
 	if port == "" {
@@ -102,18 +108,15 @@ func main() {
 	}
 
 	log.Printf("Server listening on :%s", port)
-	if err := http.ListenAndServe(":"+port, nil); err != nil {
+
+	err = http.ListenAndServe(":"+port, handler)
+	if err != nil {
 		log.Fatalf("server error: %v", err)
 	}
 }
 
 func cocktailsHandler(pool *pgxpool.Pool) http.HandlerFunc {
 	return func(w http.ResponseWriter, r *http.Request) {
-		if r.Method != http.MethodGet {
-			http.Error(w, "method not allowed", http.StatusMethodNotAllowed)
-			return
-		}
-
 		ctx, cancel := context.WithTimeout(r.Context(), 5*time.Second)
 		defer cancel()
 
@@ -132,11 +135,6 @@ func cocktailsHandler(pool *pgxpool.Pool) http.HandlerFunc {
 
 func randomCocktailHandler(pool *pgxpool.Pool) http.HandlerFunc {
 	return func(w http.ResponseWriter, r *http.Request) {
-		if r.Method != http.MethodGet {
-			http.Error(w, "method not allowed", http.StatusMethodNotAllowed)
-			return
-		}
-
 		ctx, cancel := context.WithTimeout(r.Context(), 5*time.Second)
 		defer cancel()
 

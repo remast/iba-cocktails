@@ -1,1 +1,4 @@
+GET http://localhost:8080/api/cocktails/random
+
+### Get all cocktails
 GET http://localhost:8080/api/cocktails

@@ -1,6 +1,7 @@
 package main
 
 import (
+	"cmp"
 	"context"
 	"log"
 	"net/http"
@@ -80,7 +81,7 @@ FROM (
 ) AS cocktail_data;`
 
 func main() {
-	connStr := os.Getenv("DATABASE_URL")
+	connStr := cmp.Or(os.Getenv("DATABASE_URL"), "postgres://postgres:postgres@localhost:5432/cocktails?sslmode=disable")
 	if connStr == "" {
 		log.Fatal("environment variable DATABASE_URL is not set")
 	}

@@ -7,7 +7,7 @@
 -- Cocktail: Negroni
 WITH new_cocktail AS (
     INSERT INTO cocktails (slug, name, glass, category, garnish, preparation, image_url)
-    VALUES ('negroni', 'Negroni', 'old-fashioned', 'Before Dinner Cocktail', 'Half an orange slice', 'Build into old-fashioned glass filled with ice. Stir gently.', 'https://iba-world.com/wp-content/uploads/2020/12/negroni.jpg')
+    VALUES ('negroni', 'Negroni', 'old-fashioned', 'Before Dinner Cocktail', 'Half an orange slice', 'Build into old-fashioned glass filled with ice. Stir gently.', 'https://upload.wikimedia.org/wikipedia/commons/c/c6/Negroni_served_in_Vancouver_BC.jpg')
     RETURNING id
 )
 INSERT INTO ingredients (cocktail_id, position, base_ingredient_id, amount, unit, label, special)
@@ -19,7 +19,7 @@ VALUES
 -- Cocktail: Old Fashioned
 WITH new_cocktail AS (
     INSERT INTO cocktails (slug, name, glass, category, garnish, preparation, image_url)
-    VALUES ('old-fashioned', 'Old Fashioned', 'old-fashioned', 'Before Dinner Cocktail', 'Orange slice and cherry', 'Place sugar cube in old-fashioned glass and saturate with bitters, add a dash of plain water. Muddle until dissolve. Fill the glass with ice cubes and add whisky.', 'https://iba-world.com/wp-content/uploads/2020/12/old-fashioned.jpg')
+    VALUES ('old-fashioned', 'Old Fashioned', 'old-fashioned', 'Before Dinner Cocktail', 'Orange slice and cherry', 'Place sugar cube in old-fashioned glass and saturate with bitters, add a dash of plain water. Muddle until dissolve. Fill the glass with ice cubes and add whisky.', 'https://upload.wikimedia.org/wikipedia/commons/5/56/15-09-26-RalfR-WLC-0141.jpg')
     RETURNING id
 )
 INSERT INTO ingredients (cocktail_id, position, base_ingredient_id, amount, unit, label, special)
@@ -29,7 +29,7 @@ VALUES
 -- Cocktail: Tuxedo
 WITH new_cocktail AS (
     INSERT INTO cocktails (slug, name, glass, category, garnish, preparation, image_url)
-    VALUES ('tuxedo', 'Tuxedo', 'martini', 'All Day Cocktail', 'Cherry and lemon twist', 'Stir all ingredients with ice and strain into cocktail glass.', 'https://iba-world.com/wp-content/uploads/2020/12/tuxedo.jpg')
+    VALUES ('tuxedo', 'Tuxedo', 'martini', 'All Day Cocktail', 'Cherry and lemon twist', 'Stir all ingredients with ice and strain into cocktail glass.', 'https://upload.wikimedia.org/wikipedia/commons/9/93/Tuxedo_No._2_cocktail.jpg')
     RETURNING id
 )
 INSERT INTO ingredients (cocktail_id, position, base_ingredient_id, amount, unit, label, special)
@@ -164,7 +164,7 @@ VALUES
 -- Cocktail: Screwdriver
 WITH new_cocktail AS (
     INSERT INTO cocktails (slug, name, glass, category, garnish, preparation, image_url)
-    VALUES ('screwdriver', 'Screwdriver', 'highball', 'All Day Cocktail', 'Orange slice', 'Build into a highball glass filled with ice. Stir gently.', 'https://iba-world.com/wp-content/uploads/2020/12/screwdriver.jpg')
+    VALUES ('screwdriver', 'Screwdriver', 'highball', 'All Day Cocktail', 'Orange slice', 'Build into a highball glass filled with ice. Stir gently.', 'https://upload.wikimedia.org/wikipedia/commons/4/45/Screwdriver%2C_Birmingham-Shuttlesworth_International_Airport%2C_Birmingham_AL.jpg')
     RETURNING id
 )
 INSERT INTO ingredients (cocktail_id, position, base_ingredient_id, amount, unit, label, special)
@@ -175,7 +175,7 @@ VALUES
 -- Cocktail: Cuba Libre
 WITH new_cocktail AS (
     INSERT INTO cocktails (slug, name, glass, category, garnish, preparation, image_url)
-    VALUES ('cuba-libre', 'Cuba Libre', 'highball', 'Longdrink', 'Lime wedge', 'Build all ingredients in a highball glass filled with ice.', 'https://iba-world.com/wp-content/uploads/2020/12/cuba-libre.jpg')
+    VALUES ('cuba-libre', 'Cuba Libre', 'highball', 'Longdrink', 'Lime wedge', 'Build all ingredients in a highball glass filled with ice.', 'https://upload.wikimedia.org/wikipedia/commons/e/e5/Cuba_Libre.jpg')
     RETURNING id
 )
 INSERT INTO ingredients (cocktail_id, position, base_ingredient_id, amount, unit, label, special)
@@ -187,7 +187,7 @@ VALUES
 -- Cocktail: Manhattan
 WITH new_cocktail AS (
     INSERT INTO cocktails (slug, name, glass, category, garnish, preparation, image_url)
-    VALUES ('manhattan', 'Manhattan', 'martini', 'Before Dinner Cocktail', 'Cherry', 'Stir in mixing glass with ice cubes. Strain into chilled cocktail glass.', 'https://iba-world.com/wp-content/uploads/2020/12/manhattan.jpg')
+    VALUES ('manhattan', 'Manhattan', 'martini', 'Before Dinner Cocktail', 'Cherry', 'Stir in mixing glass with ice cubes. Strain into chilled cocktail glass.', 'https://upload.wikimedia.org/wikipedia/commons/2/25/Rum_Manhattan_cocktail_with_Maraschino_caviar.jpg')
     RETURNING id
 )
 INSERT INTO ingredients (cocktail_id, position, base_ingredient_id, amount, unit, label, special)

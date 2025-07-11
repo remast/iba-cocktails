@@ -388,7 +388,7 @@ VALUES
 -- Cocktail: Sex on the Beach
 WITH new_cocktail AS (
     INSERT INTO cocktails (slug, name, glass, category, garnish, preparation, image_url)
-    VALUES ('sex-on-the-beach', 'Sex on the Beach', 'highball', 'Longdrink', 'Orange slice', 'Build all ingredients in a highball glass filled with ice.', 'https://iba-world.com/wp-content/uploads/2020/12/sex-on-the-beach.jpg')
+    VALUES ('sex-on-the-beach', 'Sex on the Beach', 'highball', 'Longdrink', 'Orange slice', 'Build all ingredients in a highball glass filled with ice.', 'https://upload.wikimedia.org/wikipedia/commons/6/6b/Sex_on_the_Beach_cocktail.jpg')
     RETURNING id
 )
 INSERT INTO ingredients (cocktail_id, position, base_ingredient_id, amount, unit, label, special)
@@ -401,7 +401,7 @@ VALUES
 -- Cocktail: Monkey Gland
 WITH new_cocktail AS (
     INSERT INTO cocktails (slug, name, glass, category, garnish, preparation, image_url)
-    VALUES ('monkey-gland', 'Monkey Gland', 'martini', 'All Day Cocktail', NULL, 'Shake and strain into a chilled cocktail glass.', 'https://iba-world.com/wp-content/uploads/2020/12/monkey-gland.jpg')
+    VALUES ('monkey-gland', 'Monkey Gland', 'martini', 'All Day Cocktail', NULL, 'Shake and strain into a chilled cocktail glass.', 'https://upload.wikimedia.org/wikipedia/commons/2/2d/Monkey_Gland_cocktail.jpg')
     RETURNING id
 )
 INSERT INTO ingredients (cocktail_id, position, base_ingredient_id, amount, unit, label, special)
@@ -412,7 +412,7 @@ VALUES
 -- Cocktail: Sidecar
 WITH new_cocktail AS (
     INSERT INTO cocktails (slug, name, glass, category, garnish, preparation, image_url)
-    VALUES ('sidecar', 'Sidecar', 'martini', 'All Day Cocktail', NULL, 'Shake with ice cubes. Strain into cocktail glass.', 'https://iba-world.com/wp-content/uploads/2020/12/sidecar.jpg')
+    VALUES ('sidecar', 'Sidecar', 'martini', 'All Day Cocktail', NULL, 'Shake with ice cubes. Strain into cocktail glass.', 'https://upload.wikimedia.org/wikipedia/commons/2/2d/Sidecar_cocktail.jpg')
     RETURNING id
 )
 INSERT INTO ingredients (cocktail_id, position, base_ingredient_id, amount, unit, label, special)
@@ -424,7 +424,7 @@ VALUES
 -- Cocktail: Irish Coffee
 WITH new_cocktail AS (
     INSERT INTO cocktails (slug, name, glass, category, garnish, preparation, image_url)
-    VALUES ('irish-coffee', 'Irish Coffee', 'hot-drink', 'Hot Drink', NULL, 'Warm the Irish whiskey over a burner. Pour into the glass (for hot drink) hot coffee, and add a teaspoon of sugar. Float Cream on top.', 'https://iba-world.com/wp-content/uploads/2020/12/irish-coffee.jpg')
+    VALUES ('irish-coffee', 'Irish Coffee', 'hot-drink', 'Hot Drink', NULL, 'Warm the Irish whiskey over a burner. Pour into the glass (for hot drink) hot coffee, and add a teaspoon of sugar. Float Cream on top.', 'https://upload.wikimedia.org/wikipedia/commons/2/2d/Irish_Coffee_cocktail.jpg')
     RETURNING id
 )
 INSERT INTO ingredients (cocktail_id, position, base_ingredient_id, amount, unit, label, special)
@@ -436,7 +436,7 @@ VALUES
 -- Cocktail: Sazerac
 WITH new_cocktail AS (
     INSERT INTO cocktails (slug, name, glass, category, garnish, preparation, image_url)
-    VALUES ('sazerac', 'Sazerac', 'old-fashioned', 'After Dinner Cocktail', 'Lemon twist', 'Rinse a chilled old-fashioned glass with the absinthe, add crushed ice and set it aside. Stir the remaining ingredients over ice and set it aside. Discard the ice and any excess absinthe from the prepared glass, and strain the drink into the glass. Note: The original recipe changed after the American Civil War, rye whiskey substituted cognac as it became hard to obtain.', 'https://iba-world.com/wp-content/uploads/2020/12/sazerac.jpg')
+    VALUES ('sazerac', 'Sazerac', 'old-fashioned', 'After Dinner Cocktail', 'Lemon twist', 'Rinse a chilled old-fashioned glass with the absinthe, add crushed ice and set it aside. Stir the remaining ingredients over ice and set it aside. Discard the ice and any excess absinthe from the prepared glass, and strain the drink into the glass. Note: The original recipe changed after the American Civil War, rye whiskey substituted cognac as it became hard to obtain.', 'https://upload.wikimedia.org/wikipedia/commons/2/2d/Sazerac_cocktail.jpg')
     RETURNING id
 )
 INSERT INTO ingredients (cocktail_id, position, base_ingredient_id, amount, unit, label, special)
@@ -447,7 +447,7 @@ VALUES
 -- Cocktail: Americano
 WITH new_cocktail AS (
     INSERT INTO cocktails (slug, name, glass, category, garnish, preparation, image_url)
-    VALUES ('americano', 'Americano', 'old-fashioned', 'Before Dinner Cocktail', 'Half an orange slice', 'Build into old fashioned glass filled with ice cubes. Add a splash of soda water.', 'https://iba-world.com/wp-content/uploads/2020/12/americano.jpg')
+    VALUES ('americano', 'Americano', 'old-fashioned', 'Before Dinner Cocktail', 'Half an orange slice', 'Build into old fashioned glass filled with ice cubes. Add a splash of soda water.', 'https://upload.wikimedia.org/wikipedia/commons/2/2d/Americano_cocktail.jpg')
     RETURNING id
 )
 INSERT INTO ingredients (cocktail_id, position, base_ingredient_id, amount, unit, label, special)
@@ -458,7 +458,7 @@ VALUES
 -- Cocktail: Singapore Sling
 WITH new_cocktail AS (
     INSERT INTO cocktails (slug, name, glass, category, garnish, preparation, image_url)
-    VALUES ('singapore-sling', 'Singapore Sling', 'highball', 'Longdrink', 'Pineapple slice and a cherry', 'Shake with ice cubes. Strain into highball glass.', 'https://iba-world.com/wp-content/uploads/2020/12/singapore-sling.jpg')
+    VALUES ('singapore-sling', 'Singapore Sling', 'highball', 'Longdrink', 'Pineapple slice and a cherry', 'Shake with ice cubes. Strain into highball glass.', 'https://upload.wikimedia.org/wikipedia/commons/2/2d/Singapore_Sling_cocktail.jpg')
     RETURNING id
 )
 INSERT INTO ingredients (cocktail_id, position, base_ingredient_id, amount, unit, label, special)
@@ -474,7 +474,7 @@ VALUES
 -- Cocktail: Moscow Mule
 WITH new_cocktail AS (
     INSERT INTO cocktails (slug, name, glass, category, garnish, preparation, image_url)
-    VALUES ('moscow-mule', 'Moscow Mule', 'highball', 'Longdrink', 'Lime slice', 'Combine the vodka and ginger beer. Add lime juice.', 'https://iba-world.com/wp-content/uploads/2020/12/moscow-mule.jpg')
+    VALUES ('moscow-mule', 'Moscow Mule', 'highball', 'Longdrink', 'Lime slice', 'Combine the vodka and ginger beer. Add lime juice.', 'https://upload.wikimedia.org/wikipedia/commons/2/2d/Moscow_Mule_cocktail.jpg')
     RETURNING id
 )
 INSERT INTO ingredients (cocktail_id, position, base_ingredient_id, amount, unit, label, special)
@@ -486,7 +486,7 @@ VALUES
 -- Cocktail: John Collins
 WITH new_cocktail AS (
     INSERT INTO cocktails (slug, name, glass, category, garnish, preparation, image_url)
-    VALUES ('john-collins', 'John Collins', 'highball', 'Longdrink', 'Lemon slice and a cherry', 'Build into highball glass filled with ice. Stir gently. Add a dash of Angostura bitters. (Note: Use Old Tom Gin for Tom Collins)', 'https://iba-world.com/wp-content/uploads/2020/12/john-collins.jpg')
+    VALUES ('john-collins', 'John Collins', 'highball', 'Longdrink', 'Lemon slice and a cherry', 'Build into highball glass filled with ice. Stir gently. Add a dash of Angostura bitters. (Note: Use Old Tom Gin for Tom Collins)', 'https://upload.wikimedia.org/wikipedia/commons/2/2d/John_Collins_cocktail.jpg')
     RETURNING id
 )
 INSERT INTO ingredients (cocktail_id, position, base_ingredient_id, amount, unit, label, special)
@@ -499,7 +499,7 @@ VALUES
 -- Cocktail: Kir
 WITH new_cocktail AS (
     INSERT INTO cocktails (slug, name, glass, category, garnish, preparation, image_url)
-    VALUES ('kir', 'Kir', 'white-wine', 'Before Dinner Cocktail', NULL, 'Pour Créme de Cassis into glass, top up with white wine. For Kir Royal: Use champagne instead of white wine.', 'https://iba-world.com/wp-content/uploads/2020/12/kir.jpg')
+    VALUES ('kir', 'Kir', 'white-wine', 'Before Dinner Cocktail', NULL, 'Pour Créme de Cassis into glass, top up with white wine. For Kir Royal: Use champagne instead of white wine.', 'https://upload.wikimedia.org/wikipedia/commons/2/2d/Kir_cocktail.jpg')
     RETURNING id
 )
 INSERT INTO ingredients (cocktail_id, position, base_ingredient_id, amount, unit, label, special)

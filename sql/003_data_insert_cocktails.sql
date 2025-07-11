@@ -40,7 +40,7 @@ VALUES
 -- Cocktail: Mojito
 WITH new_cocktail AS (
     INSERT INTO cocktails (slug, name, glass, category, garnish, preparation, image_url)
-    VALUES ('mojito', 'Mojito', 'collins', 'Longdrink', 'Mint leaves and lemon slice', 'Muddle mint sprigs with sugar and lime juice. Add splash of soda water and fill glass with cracked ice. Pour rum and top with soda water. Serve with straw.', 'https://iba-world.com/wp-content/uploads/2020/12/mojito.jpg')
+    VALUES ('mojito', 'Mojito', 'collins', 'Longdrink', 'Mint leaves and lemon slice', 'Muddle mint sprigs with sugar and lime juice. Add splash of soda water and fill glass with cracked ice. Pour rum and top with soda water. Serve with straw.', 'https://upload.wikimedia.org/wikipedia/commons/thumb/8/87/15-09-26-RalfR-WLC-0067.jpg/640px-15-09-26-RalfR-WLC-0067.jpg')
     RETURNING id
 )
 INSERT INTO ingredients (cocktail_id, position, base_ingredient_id, amount, unit, label, special)
@@ -51,7 +51,7 @@ VALUES
 -- Cocktail: Horse's Neck
 WITH new_cocktail AS (
     INSERT INTO cocktails (slug, name, glass, category, garnish, preparation, image_url)
-    VALUES ('horses-neck', 'Horse''s Neck', 'highball', 'Longdrink', 'Lemon twist', 'Build into highball glass with ice cubes. Stir gently. If required, add dashes of Angostura bitters.', 'https://iba-world.com/wp-content/uploads/2020/12/horses-neck.jpg')
+    VALUES ('horses-neck', 'Horse''s Neck', 'highball', 'Longdrink', 'Lemon twist', 'Build into highball glass with ice cubes. Stir gently. If required, add dashes of Angostura bitters.', 'https://upload.wikimedia.org/wikipedia/commons/5/54/16-09-17-WikiLovesCocktails-Drink-Img0266_1.jpg')
     RETURNING id
 )
 INSERT INTO ingredients (cocktail_id, position, base_ingredient_id, amount, unit, label, special)
@@ -62,7 +62,7 @@ VALUES
 -- Cocktail: Planter's Punch
 WITH new_cocktail AS (
     INSERT INTO cocktails (slug, name, glass, category, garnish, preparation, image_url)
-    VALUES ('planters-punch', 'Planter''s Punch', 'highball', 'Longdrink', 'Pineapple slice and a cherry', 'Pour all ingredients, except the bitters, into shaker filled with ice. Shake. Pour into large glass, filled with ice. Add Angostura bitters, “on top”.', 'https://iba-world.com/wp-content/uploads/2020/12/planters-punch.jpg')
+    VALUES ('planters-punch', 'Planter''s Punch', 'highball', 'Longdrink', 'Pineapple slice and a cherry', 'Pour all ingredients, except the bitters, into shaker filled with ice. Shake. Pour into large glass, filled with ice. Add Angostura bitters, “on top”.', 'https://upload.wikimedia.org/wikipedia/commons/5/54/16-09-17-WikiLovesCocktails-Drink-Img0266_1.jpg')
     RETURNING id
 )
 INSERT INTO ingredients (cocktail_id, position, base_ingredient_id, amount, unit, label, special)
@@ -77,7 +77,7 @@ VALUES
 -- Cocktail: Sea Breeze
 WITH new_cocktail AS (
     INSERT INTO cocktails (slug, name, glass, category, garnish, preparation, image_url)
-    VALUES ('sea-breeze', 'Sea Breeze', 'highball', 'Longdrink', 'Lime wedge', 'Build all ingredients in a rock glass filled with ice.', 'https://iba-world.com/wp-content/uploads/2020/12/sea-breeze.jpg')
+    VALUES ('sea-breeze', 'Sea Breeze', 'highball', 'Longdrink', 'Lime wedge', 'Build all ingredients in a rock glass filled with ice.', 'https://upload.wikimedia.org/wikipedia/commons/5/54/16-09-17-WikiLovesCocktails-Drink-Img0266_1.jpg')
     RETURNING id
 )
 INSERT INTO ingredients (cocktail_id, position, base_ingredient_id, amount, unit, label, special)
@@ -89,7 +89,7 @@ VALUES
 -- Cocktail: Pisco Sour
 WITH new_cocktail AS (
     INSERT INTO cocktails (slug, name, glass, category, garnish, preparation, image_url)
-    VALUES ('pisco-sour', 'Pisco Sour', 'old-fashioned', 'All Day Cocktail', NULL, 'Shake and strain into a chilled champagne flute. Dash some Angostura bitters on top.', 'https://iba-world.com/wp-content/uploads/2020/12/pisco-sour.jpg')
+    VALUES ('pisco-sour', 'Pisco Sour', 'old-fashioned', 'All Day Cocktail', NULL, 'Shake and strain into a chilled champagne flute. Dash some Angostura bitters on top.', 'https://upload.wikimedia.org/wikipedia/commons/5/54/16-09-17-WikiLovesCocktails-Drink-Img0266_1.jpg')
     RETURNING id
 )
 INSERT INTO ingredients (cocktail_id, position, base_ingredient_id, amount, unit, label, special)
@@ -101,7 +101,7 @@ VALUES
 -- Cocktail: Long Island Iced Tea
 WITH new_cocktail AS (
     INSERT INTO cocktails (slug, name, glass, category, garnish, preparation, image_url)
-    VALUES ('long-island-iced-tea', 'Long Island Iced Tea', 'highball', 'Longdrink', 'Lemon twist', 'Add all ingredients into highball glass filled with ice. Stir gently. Serve with straw.', 'https://iba-world.com/wp-content/uploads/2020/12/long-island-iced-tea.jpg')
+    VALUES ('long-island-iced-tea', 'Long Island Iced Tea', 'highball', 'Longdrink', 'Lemon twist', 'Add all ingredients into highball glass filled with ice. Stir gently. Serve with straw.', 'https://upload.wikimedia.org/wikipedia/commons/2/2d/Long_Island_Iced_Tea_cocktail.jpg')
     RETURNING id
 )
 INSERT INTO ingredients (cocktail_id, position, base_ingredient_id, amount, unit, label, special)
@@ -117,7 +117,7 @@ VALUES
 -- Cocktail: Clover Club
 WITH new_cocktail AS (
     INSERT INTO cocktails (slug, name, glass, category, garnish, preparation, image_url)
-    VALUES ('clover-club', 'Clover Club', 'martini', 'All Day Cocktail', NULL, 'Shake with ice cubes. Strain into cocktail glass.', 'https://iba-world.com/wp-content/uploads/2020/12/clover-club.jpg')
+    VALUES ('clover-club', 'Clover Club', 'martini', 'All Day Cocktail', NULL, 'Shake with ice cubes. Strain into cocktail glass.', 'https://upload.wikimedia.org/wikipedia/commons/5/54/16-09-17-WikiLovesCocktails-Drink-Img0266_1.jpg')
     RETURNING id
 )
 INSERT INTO ingredients (cocktail_id, position, base_ingredient_id, amount, unit, label, special)
@@ -129,7 +129,7 @@ VALUES
 -- Cocktail: Angel Face
 WITH new_cocktail AS (
     INSERT INTO cocktails (slug, name, glass, category, garnish, preparation, image_url)
-    VALUES ('angel-face', 'Angel Face', 'martini', 'All Day Cocktail', NULL, 'Shake with ice cubes. Strain into a cocktail glass.', 'https://iba-world.com/wp-content/uploads/2020/12/angel-face.jpg')
+    VALUES ('angel-face', 'Angel Face', 'martini', 'All Day Cocktail', NULL, 'Shake with ice cubes. Strain into a cocktail glass.', 'https://upload.wikimedia.org/wikipedia/commons/2/2d/Angel_Face_cocktail.jpg')
     RETURNING id
 )
 INSERT INTO ingredients (cocktail_id, position, base_ingredient_id, amount, unit, label, special)
@@ -141,7 +141,7 @@ VALUES
 -- Cocktail: Mimosa
 WITH new_cocktail AS (
     INSERT INTO cocktails (slug, name, glass, category, garnish, preparation, image_url)
-    VALUES ('mimosa', 'Mimosa', 'champagne-flute', 'Sparkling Cocktail', 'Optional orange twist', 'Pour orange juice into flute and gently pour Champagne. Stir gently. Note: Buck''s Fizz is a very similar cocktail but made of two parts champagne to one part orange juice.', 'https://iba-world.com/wp-content/uploads/2020/12/mimosa.jpg')
+    VALUES ('mimosa', 'Mimosa', 'champagne-flute', 'Sparkling Cocktail', 'Optional orange twist', 'Pour orange juice into flute and gently pour Champagne. Stir gently. Note: Buck''s Fizz is a very similar cocktail but made of two parts champagne to one part orange juice.', 'https://upload.wikimedia.org/wikipedia/commons/5/54/16-09-17-WikiLovesCocktails-Drink-Img0266_1.jpg')
     RETURNING id
 )
 INSERT INTO ingredients (cocktail_id, position, base_ingredient_id, amount, unit, label, special)
@@ -152,7 +152,7 @@ VALUES
 -- Cocktail: Whiskey Sour
 WITH new_cocktail AS (
     INSERT INTO cocktails (slug, name, glass, category, garnish, preparation, image_url)
-    VALUES ('whiskey-sour', 'Whiskey Sour', 'old-fashioned', 'Before Dinner Cocktail', 'Half an orange slice and cherry', 'Dash egg white (Optional: if used shake little harder to foam up the egg white). Pour all ingredients into cocktail shaker filled with ice. Shake. Strain into cocktail glass. If served ‘On the rocks’, strain ingredients into old-fashioned glass filled with ice.', 'https://iba-world.com/wp-content/uploads/2020/12/whiskey-sour.jpg')
+    VALUES ('whiskey-sour', 'Whiskey Sour', 'old-fashioned', 'Before Dinner Cocktail', 'Half an orange slice and cherry', 'Dash egg white (Optional: if used shake little harder to foam up the egg white). Pour all ingredients into cocktail shaker filled with ice. Shake. Strain into cocktail glass. If served ‘On the rocks’, strain ingredients into old-fashioned glass filled with ice.', 'https://upload.wikimedia.org/wikipedia/commons/5/54/16-09-17-WikiLovesCocktails-Drink-Img0266_1.jpg')
     RETURNING id
 )
 INSERT INTO ingredients (cocktail_id, position, base_ingredient_id, amount, unit, label, special)
@@ -164,7 +164,7 @@ VALUES
 -- Cocktail: Screwdriver
 WITH new_cocktail AS (
     INSERT INTO cocktails (slug, name, glass, category, garnish, preparation, image_url)
-    VALUES ('screwdriver', 'Screwdriver', 'highball', 'All Day Cocktail', 'Orange slice', 'Build into a highball glass filled with ice. Stir gently.', 'https://upload.wikimedia.org/wikipedia/commons/4/45/Screwdriver%2C_Birmingham-Shuttlesworth_International_Airport%2C_Birmingham_AL.jpg')
+    VALUES ('screwdriver', 'Screwdriver', 'highball', 'All Day Cocktail', 'Orange slice', 'Build into a highball glass filled with ice. Stir gently.', 'https://upload.wikimedia.org/wikipedia/commons/5/54/16-09-17-WikiLovesCocktails-Drink-Img0266_1.jpg')
     RETURNING id
 )
 INSERT INTO ingredients (cocktail_id, position, base_ingredient_id, amount, unit, label, special)
@@ -175,7 +175,7 @@ VALUES
 -- Cocktail: Cuba Libre
 WITH new_cocktail AS (
     INSERT INTO cocktails (slug, name, glass, category, garnish, preparation, image_url)
-    VALUES ('cuba-libre', 'Cuba Libre', 'highball', 'Longdrink', 'Lime wedge', 'Build all ingredients in a highball glass filled with ice.', 'https://upload.wikimedia.org/wikipedia/commons/e/e5/Cuba_Libre.jpg')
+    VALUES ('cuba-libre', 'Cuba Libre', 'highball', 'Longdrink', 'Lime wedge', 'Build all ingredients in a highball glass filled with ice.', 'https://upload.wikimedia.org/wikipedia/commons/5/54/16-09-17-WikiLovesCocktails-Drink-Img0266_1.jpg')
     RETURNING id
 )
 INSERT INTO ingredients (cocktail_id, position, base_ingredient_id, amount, unit, label, special)
@@ -187,7 +187,7 @@ VALUES
 -- Cocktail: Manhattan
 WITH new_cocktail AS (
     INSERT INTO cocktails (slug, name, glass, category, garnish, preparation, image_url)
-    VALUES ('manhattan', 'Manhattan', 'martini', 'Before Dinner Cocktail', 'Cherry', 'Stir in mixing glass with ice cubes. Strain into chilled cocktail glass.', 'https://upload.wikimedia.org/wikipedia/commons/2/25/Rum_Manhattan_cocktail_with_Maraschino_caviar.jpg')
+    VALUES ('manhattan', 'Manhattan', 'martini', 'Before Dinner Cocktail', 'Cherry', 'Stir in mixing glass with ice cubes. Strain into chilled cocktail glass.', 'https://upload.wikimedia.org/wikipedia/commons/5/54/16-09-17-WikiLovesCocktails-Drink-Img0266_1.jpg')
     RETURNING id
 )
 INSERT INTO ingredients (cocktail_id, position, base_ingredient_id, amount, unit, label, special)
@@ -198,7 +198,7 @@ VALUES
 -- Cocktail: Porto Flip
 WITH new_cocktail AS (
     INSERT INTO cocktails (slug, name, glass, category, garnish, preparation, image_url)
-    VALUES ('porto-flip', 'Porto Flip', 'martini', 'After Dinner Cocktail', NULL, 'Shake with ice cubes. Strain into cocktail glass. Sprinkle with fresh ground nutmeg.', 'https://iba-world.com/wp-content/uploads/2020/12/porto-flip.jpg')
+    VALUES ('porto-flip', 'Porto Flip', 'martini', 'After Dinner Cocktail', NULL, 'Shake with ice cubes. Strain into cocktail glass. Sprinkle with fresh ground nutmeg.', 'https://upload.wikimedia.org/wikipedia/commons/5/54/16-09-17-WikiLovesCocktails-Drink-Img0266_1.jpg')
     RETURNING id
 )
 INSERT INTO ingredients (cocktail_id, position, base_ingredient_id, amount, unit, label, special)
@@ -210,7 +210,7 @@ VALUES
 -- Cocktail: Gin Fizz
 WITH new_cocktail AS (
     INSERT INTO cocktails (slug, name, glass, category, garnish, preparation, image_url)
-    VALUES ('gin-fizz', 'Gin Fizz', 'highball', 'Longdrink', 'Lemon slice', 'Shake all ingredients with ice cubes, except soda water. Pour into tumbler. Top with soda water.', 'https://upload.wikimedia.org/wikipedia/commons/7/7e/Gin_Fizz_cocktail.jpg')
+    VALUES ('gin-fizz', 'Gin Fizz', 'highball', 'Longdrink', 'Lemon slice', 'Shake all ingredients with ice cubes, except soda water. Pour into tumbler. Top with soda water.', 'https://upload.wikimedia.org/wikipedia/commons/5/54/16-09-17-WikiLovesCocktails-Drink-Img0266_1.jpg')
     RETURNING id
 )
 INSERT INTO ingredients (cocktail_id, position, base_ingredient_id, amount, unit, label, special)
@@ -223,7 +223,7 @@ VALUES
 -- Cocktail: Espresso Martini
 WITH new_cocktail AS (
     INSERT INTO cocktails (slug, name, glass, category, garnish, preparation, image_url)
-    VALUES ('espresso-martini', 'Espresso Martini', 'martini', 'After Dinner Cocktail', NULL, 'Shake and strain into a chilled cocktail glass.', 'https://upload.wikimedia.org/wikipedia/commons/6/6a/Espresso_Martini_cocktail.jpg')
+    VALUES ('espresso-martini', 'Espresso Martini', 'martini', 'After Dinner Cocktail', NULL, 'Shake and strain into a chilled cocktail glass.', 'https://upload.wikimedia.org/wikipedia/commons/5/54/16-09-17-WikiLovesCocktails-Drink-Img0266_1.jpg')
     RETURNING id
 )
 INSERT INTO ingredients (cocktail_id, position, base_ingredient_id, amount, unit, label, special)
@@ -234,7 +234,7 @@ VALUES
 -- Cocktail: Margarita
 WITH new_cocktail AS (
     INSERT INTO cocktails (slug, name, glass, category, garnish, preparation, image_url)
-    VALUES ('margarita', 'Margarita', 'margarita', 'All Day Cocktail', NULL, 'Shake with ice cubes. Strain into cocktail glass rimmed with salt (note:Fruit Margarita - blend selected fruit with the above recipe).', 'https://upload.wikimedia.org/wikipedia/commons/6/6b/MargaritaReal.jpg')
+    VALUES ('margarita', 'Margarita', 'margarita', 'All Day Cocktail', NULL, 'Shake with ice cubes. Strain into cocktail glass rimmed with salt (note:Fruit Margarita - blend selected fruit with the above recipe).', 'https://upload.wikimedia.org/wikipedia/commons/5/54/16-09-17-WikiLovesCocktails-Drink-Img0266_1.jpg')
     RETURNING id
 )
 INSERT INTO ingredients (cocktail_id, position, base_ingredient_id, amount, unit, label, special)
@@ -246,7 +246,7 @@ VALUES
 -- Cocktail: Aviation
 WITH new_cocktail AS (
     INSERT INTO cocktails (slug, name, glass, category, garnish, preparation, image_url)
-    VALUES ('aviation', 'Aviation', 'martini', 'All Day Cocktail', NULL, 'Shake and strain into a chilled cocktail glass.', 'https://upload.wikimedia.org/wikipedia/commons/0/0b/Aviation_Cocktail.jpg')
+    VALUES ('aviation', 'Aviation', 'martini', 'All Day Cocktail', NULL, 'Shake and strain into a chilled cocktail glass.', 'https://upload.wikimedia.org/wikipedia/commons/5/54/16-09-17-WikiLovesCocktails-Drink-Img0266_1.jpg')
     RETURNING id
 )
 INSERT INTO ingredients (cocktail_id, position, base_ingredient_id, amount, unit, label, special)
@@ -258,7 +258,7 @@ VALUES
 -- Cocktail: Bellini
 WITH new_cocktail AS (
     INSERT INTO cocktails (slug, name, glass, category, garnish, preparation, image_url)
-    VALUES ('bellini', 'Bellini', 'champagne-flute', 'Sparkling Cocktail', NULL, 'Pour peach puree into chilled glass and add sparkling wine. Stir gently. Variations: Puccini (fresh mandarin juice), Rossini (fresh strawberry puree), Tintoretto (fresh pomegranate juice)', 'https://upload.wikimedia.org/wikipedia/commons/2/2b/Bellini_cocktail.jpg')
+    VALUES ('bellini', 'Bellini', 'champagne-flute', 'Sparkling Cocktail', NULL, 'Pour peach puree into chilled glass and add sparkling wine. Stir gently. Variations: Puccini (fresh mandarin juice), Rossini (fresh strawberry puree), Tintoretto (fresh pomegranate juice)', 'https://upload.wikimedia.org/wikipedia/commons/5/54/16-09-17-WikiLovesCocktails-Drink-Img0266_1.jpg')
     RETURNING id
 )
 INSERT INTO ingredients (cocktail_id, position, base_ingredient_id, amount, unit, label, special)
@@ -269,7 +269,7 @@ VALUES
 -- Cocktail: Grasshopper
 WITH new_cocktail AS (
     INSERT INTO cocktails (slug, name, glass, category, garnish, preparation, image_url)
-    VALUES ('grasshopper', 'Grasshopper', 'martini', 'After Dinner Cocktail', NULL, 'Shake with ice cubes. Strain into chilled cocktail glass.', 'https://upload.wikimedia.org/wikipedia/commons/2/2d/Grasshopper_cocktail.jpg')
+    VALUES ('grasshopper', 'Grasshopper', 'martini', 'After Dinner Cocktail', NULL, 'Shake with ice cubes. Strain into chilled cocktail glass.', 'https://upload.wikimedia.org/wikipedia/commons/5/54/16-09-17-WikiLovesCocktails-Drink-Img0266_1.jpg')
     RETURNING id
 )
 INSERT INTO ingredients (cocktail_id, position, base_ingredient_id, amount, unit, label, special)
@@ -281,7 +281,7 @@ VALUES
 -- Cocktail: Tequila Sunrise
 WITH new_cocktail AS (
     INSERT INTO cocktails (slug, name, glass, category, garnish, preparation, image_url)
-    VALUES ('tequila-sunrise', 'Tequila Sunrise', 'highball', 'Longdrink', 'Orange slice and a cherry', 'Build tequila and orange juice into highball with ice cubes. Add a splash of grenadine to create sunrise effect. Do not stir.', 'https://upload.wikimedia.org/wikipedia/commons/5/5a/Tequila_Sunrise_cocktail.jpg')
+    VALUES ('tequila-sunrise', 'Tequila Sunrise', 'highball', 'Longdrink', 'Orange slice and a cherry', 'Build tequila and orange juice into highball with ice cubes. Add a splash of grenadine to create sunrise effect. Do not stir.', 'https://upload.wikimedia.org/wikipedia/commons/5/54/16-09-17-WikiLovesCocktails-Drink-Img0266_1.jpg')
     RETURNING id
 )
 INSERT INTO ingredients (cocktail_id, position, base_ingredient_id, amount, unit, label, special)
@@ -293,7 +293,7 @@ VALUES
 -- Cocktail: Daiquiri
 WITH new_cocktail AS (
     INSERT INTO cocktails (slug, name, glass, category, garnish, preparation, image_url)
-    VALUES ('daiquiri', 'Daiquiri', 'martini', 'Before Dinner Cocktail', NULL, 'Shake and strain into a cocktail glass.', 'https://upload.wikimedia.org/wikipedia/commons/6/6b/Daiquiri_cocktail.jpg')
+    VALUES ('daiquiri', 'Daiquiri', 'martini', 'Before Dinner Cocktail', NULL, 'Shake and strain into a cocktail glass.', 'https://upload.wikimedia.org/wikipedia/commons/5/54/16-09-17-WikiLovesCocktails-Drink-Img0266_1.jpg')
     RETURNING id
 )
 INSERT INTO ingredients (cocktail_id, position, base_ingredient_id, amount, unit, label, special)
@@ -305,7 +305,7 @@ VALUES
 -- Cocktail: Rusty Nail
 WITH new_cocktail AS (
     INSERT INTO cocktails (slug, name, glass, category, garnish, preparation, image_url)
-    VALUES ('rusty-nail', 'Rusty Nail', 'old-fashioned', 'After Dinner Cocktail', 'Lemon twist', 'Build into old-fashioned glass filled with ice. Stir gently.', 'https://upload.wikimedia.org/wikipedia/commons/2/2e/Rusty_Nail_cocktail.jpg')
+    VALUES ('rusty-nail', 'Rusty Nail', 'old-fashioned', 'After Dinner Cocktail', 'Lemon twist', 'Build into old-fashioned glass filled with ice. Stir gently.', 'https://upload.wikimedia.org/wikipedia/commons/5/54/16-09-17-WikiLovesCocktails-Drink-Img0266_1.jpg')
     RETURNING id
 )
 INSERT INTO ingredients (cocktail_id, position, base_ingredient_id, amount, unit, label, special)
@@ -316,7 +316,7 @@ VALUES
 -- Cocktail: Stinger
 WITH new_cocktail AS (
     INSERT INTO cocktails (slug, name, glass, category, garnish, preparation, image_url)
-    VALUES ('stinger', 'Stinger', 'martini', 'After Dinner Cocktail', NULL, 'Stir in mixing glass with ice cubes. Strain into a cocktail glass.', 'https://upload.wikimedia.org/wikipedia/commons/2/2d/Stinger_cocktail.jpg')
+    VALUES ('stinger', 'Stinger', 'martini', 'After Dinner Cocktail', NULL, 'Stir in mixing glass with ice cubes. Strain into a cocktail glass.', 'https://upload.wikimedia.org/wikipedia/commons/5/54/16-09-17-WikiLovesCocktails-Drink-Img0266_1.jpg')
     RETURNING id
 )
 INSERT INTO ingredients (cocktail_id, position, base_ingredient_id, amount, unit, label, special)
@@ -327,7 +327,7 @@ VALUES
 -- Cocktail: Golden Dream
 WITH new_cocktail AS (
     INSERT INTO cocktails (slug, name, glass, category, garnish, preparation, image_url)
-    VALUES ('golden-dream', 'Golden Dream', 'martini', 'After Dinner Cocktail', NULL, 'Shake with ice cubes. Strain into chilled cocktail glass.', 'https://upload.wikimedia.org/wikipedia/commons/2/2d/Golden_Dream_cocktail.jpg')
+    VALUES ('golden-dream', 'Golden Dream', 'martini', 'After Dinner Cocktail', NULL, 'Shake with ice cubes. Strain into chilled cocktail glass.', 'https://upload.wikimedia.org/wikipedia/commons/5/54/16-09-17-WikiLovesCocktails-Drink-Img0266_1.jpg')
     RETURNING id
 )
 INSERT INTO ingredients (cocktail_id, position, base_ingredient_id, amount, unit, label, special)
@@ -340,7 +340,7 @@ VALUES
 -- Cocktail: Bramble
 WITH new_cocktail AS (
     INSERT INTO cocktails (slug, name, glass, category, garnish, preparation, image_url)
-    VALUES ('bramble', 'Bramble', 'old-fashioned', 'All Day Cocktail', 'Lemon slice and two blackberries', 'Build over crushed ice, in a rock glass. Stir, then pour the blackberry liqueur over the top of the drink in a circular fashion.', 'https://upload.wikimedia.org/wikipedia/commons/2/2d/Bramble_cocktail.jpg')
+    VALUES ('bramble', 'Bramble', 'old-fashioned', 'All Day Cocktail', 'Lemon slice and two blackberries', 'Build over crushed ice, in a rock glass. Stir, then pour the blackberry liqueur over the top of the drink in a circular fashion.', 'https://upload.wikimedia.org/wikipedia/commons/5/54/16-09-17-WikiLovesCocktails-Drink-Img0266_1.jpg')
     RETURNING id
 )
 INSERT INTO ingredients (cocktail_id, position, base_ingredient_id, amount, unit, label, special)
@@ -353,7 +353,7 @@ VALUES
 -- Cocktail: Alexander
 WITH new_cocktail AS (
     INSERT INTO cocktails (slug, name, glass, category, garnish, preparation, image_url)
-    VALUES ('alexander', 'Alexander', 'martini', NULL, NULL, 'Shake and strain into a chilled cocktail glass. Sprinkle with fresh ground nutmeg.', 'https://upload.wikimedia.org/wikipedia/commons/2/2d/Alexander_cocktail.jpg')
+    VALUES ('alexander', 'Alexander', 'martini', NULL, NULL, 'Shake and strain into a chilled cocktail glass. Sprinkle with fresh ground nutmeg.', 'https://upload.wikimedia.org/wikipedia/commons/5/54/16-09-17-WikiLovesCocktails-Drink-Img0266_1.jpg')
     RETURNING id
 )
 INSERT INTO ingredients (cocktail_id, position, base_ingredient_id, amount, unit, label, special)
@@ -365,7 +365,7 @@ VALUES
 -- Cocktail: Black Russian
 WITH new_cocktail AS (
     INSERT INTO cocktails (slug, name, glass, category, garnish, preparation, image_url)
-    VALUES ('black-russian', 'Black Russian', 'old-fashioned', 'After Dinner Cocktail', NULL, 'Build into old fashioned glass filled with ice cubes. Stir gently. Note: for White Russian, float fresh cream on the top and stir gently.', 'https://upload.wikimedia.org/wikipedia/commons/2/2d/Black_Russian_cocktail.jpg')
+    VALUES ('black-russian', 'Black Russian', 'old-fashioned', 'After Dinner Cocktail', NULL, 'Build into old fashioned glass filled with ice cubes. Stir gently. Note: for White Russian, float fresh cream on the top and stir gently.', 'https://upload.wikimedia.org/wikipedia/commons/9/91/Black_Russian.jpg')
     RETURNING id
 )
 INSERT INTO ingredients (cocktail_id, position, base_ingredient_id, amount, unit, label, special)
@@ -376,7 +376,7 @@ VALUES
 -- Cocktail: Bloody Mary
 WITH new_cocktail AS (
     INSERT INTO cocktails (slug, name, glass, category, garnish, preparation, image_url)
-    VALUES ('bloody-mary', 'Bloody Mary', 'highball', 'Longdrink', 'Celery and optionally lemon wedge', 'Stir gently, pour all ingredients into highball glass.', 'https://upload.wikimedia.org/wikipedia/commons/2/2d/Bloody_Mary_cocktail.jpg')
+    VALUES ('bloody-mary', 'Bloody Mary', 'highball', 'Longdrink', 'Celery and optionally lemon wedge', 'Stir gently, pour all ingredients into highball glass.', 'https://upload.wikimedia.org/wikipedia/commons/f/fc/SazeracCocktail.jpg')
     RETURNING id
 )
 INSERT INTO ingredients (cocktail_id, position, base_ingredient_id, amount, unit, label, special)
@@ -388,7 +388,7 @@ VALUES
 -- Cocktail: Sex on the Beach
 WITH new_cocktail AS (
     INSERT INTO cocktails (slug, name, glass, category, garnish, preparation, image_url)
-    VALUES ('sex-on-the-beach', 'Sex on the Beach', 'highball', 'Longdrink', 'Orange slice', 'Build all ingredients in a highball glass filled with ice.', 'https://upload.wikimedia.org/wikipedia/commons/6/6b/Sex_on_the_Beach_cocktail.jpg')
+    VALUES ('sex-on-the-beach', 'Sex on the Beach', 'highball', 'Longdrink', 'Orange slice', 'Build all ingredients in a highball glass filled with ice.', 'https://upload.wikimedia.org/wikipedia/commons/f/fc/SazeracCocktail.jpg')
     RETURNING id
 )
 INSERT INTO ingredients (cocktail_id, position, base_ingredient_id, amount, unit, label, special)
@@ -401,7 +401,7 @@ VALUES
 -- Cocktail: Monkey Gland
 WITH new_cocktail AS (
     INSERT INTO cocktails (slug, name, glass, category, garnish, preparation, image_url)
-    VALUES ('monkey-gland', 'Monkey Gland', 'martini', 'All Day Cocktail', NULL, 'Shake and strain into a chilled cocktail glass.', 'https://upload.wikimedia.org/wikipedia/commons/2/2d/Monkey_Gland_cocktail.jpg')
+    VALUES ('monkey-gland', 'Monkey Gland', 'martini', 'All Day Cocktail', NULL, 'Shake and strain into a chilled cocktail glass.', 'https://upload.wikimedia.org/wikipedia/commons/f/fc/SazeracCocktail.jpg')
     RETURNING id
 )
 INSERT INTO ingredients (cocktail_id, position, base_ingredient_id, amount, unit, label, special)
@@ -412,7 +412,7 @@ VALUES
 -- Cocktail: Sidecar
 WITH new_cocktail AS (
     INSERT INTO cocktails (slug, name, glass, category, garnish, preparation, image_url)
-    VALUES ('sidecar', 'Sidecar', 'martini', 'All Day Cocktail', NULL, 'Shake with ice cubes. Strain into cocktail glass.', 'https://upload.wikimedia.org/wikipedia/commons/2/2d/Sidecar_cocktail.jpg')
+    VALUES ('sidecar', 'Sidecar', 'martini', 'All Day Cocktail', NULL, 'Shake with ice cubes. Strain into cocktail glass.', 'https://upload.wikimedia.org/wikipedia/commons/f/fc/SazeracCocktail.jpg')
     RETURNING id
 )
 INSERT INTO ingredients (cocktail_id, position, base_ingredient_id, amount, unit, label, special)
@@ -424,7 +424,7 @@ VALUES
 -- Cocktail: Irish Coffee
 WITH new_cocktail AS (
     INSERT INTO cocktails (slug, name, glass, category, garnish, preparation, image_url)
-    VALUES ('irish-coffee', 'Irish Coffee', 'hot-drink', 'Hot Drink', NULL, 'Warm the Irish whiskey over a burner. Pour into the glass (for hot drink) hot coffee, and add a teaspoon of sugar. Float Cream on top.', 'https://upload.wikimedia.org/wikipedia/commons/2/2d/Irish_Coffee_cocktail.jpg')
+    VALUES ('irish-coffee', 'Irish Coffee', 'hot-drink', 'Hot Drink', NULL, 'Warm the Irish whiskey over a burner. Pour into the glass (for hot drink) hot coffee, and add a teaspoon of sugar. Float Cream on top.', 'https://upload.wikimedia.org/wikipedia/commons/f/fc/SazeracCocktail.jpg')
     RETURNING id
 )
 INSERT INTO ingredients (cocktail_id, position, base_ingredient_id, amount, unit, label, special)
@@ -436,7 +436,7 @@ VALUES
 -- Cocktail: Sazerac
 WITH new_cocktail AS (
     INSERT INTO cocktails (slug, name, glass, category, garnish, preparation, image_url)
-    VALUES ('sazerac', 'Sazerac', 'old-fashioned', 'After Dinner Cocktail', 'Lemon twist', 'Rinse a chilled old-fashioned glass with the absinthe, add crushed ice and set it aside. Stir the remaining ingredients over ice and set it aside. Discard the ice and any excess absinthe from the prepared glass, and strain the drink into the glass. Note: The original recipe changed after the American Civil War, rye whiskey substituted cognac as it became hard to obtain.', 'https://upload.wikimedia.org/wikipedia/commons/2/2d/Sazerac_cocktail.jpg')
+    VALUES ('sazerac', 'Sazerac', 'old-fashioned', 'After Dinner Cocktail', 'Lemon twist', 'Rinse a chilled old-fashioned glass with the absinthe, add crushed ice and set it aside. Stir the remaining ingredients over ice and set it aside. Discard the ice and any excess absinthe from the prepared glass, and strain the drink into the glass. Note: The original recipe changed after the American Civil War, rye whiskey substituted cognac as it became hard to obtain.', 'https://upload.wikimedia.org/wikipedia/commons/f/fc/SazeracCocktail.jpg')
     RETURNING id
 )
 INSERT INTO ingredients (cocktail_id, position, base_ingredient_id, amount, unit, label, special)
@@ -447,7 +447,7 @@ VALUES
 -- Cocktail: Americano
 WITH new_cocktail AS (
     INSERT INTO cocktails (slug, name, glass, category, garnish, preparation, image_url)
-    VALUES ('americano', 'Americano', 'old-fashioned', 'Before Dinner Cocktail', 'Half an orange slice', 'Build into old fashioned glass filled with ice cubes. Add a splash of soda water.', 'https://upload.wikimedia.org/wikipedia/commons/2/2d/Americano_cocktail.jpg')
+    VALUES ('americano', 'Americano', 'old-fashioned', 'Before Dinner Cocktail', 'Half an orange slice', 'Build into old fashioned glass filled with ice cubes. Add a splash of soda water.', 'https://upload.wikimedia.org/wikipedia/commons/5/54/16-09-17-WikiLovesCocktails-Drink-Img0266_1.jpg')
     RETURNING id
 )
 INSERT INTO ingredients (cocktail_id, position, base_ingredient_id, amount, unit, label, special)
@@ -458,7 +458,7 @@ VALUES
 -- Cocktail: Singapore Sling
 WITH new_cocktail AS (
     INSERT INTO cocktails (slug, name, glass, category, garnish, preparation, image_url)
-    VALUES ('singapore-sling', 'Singapore Sling', 'highball', 'Longdrink', 'Pineapple slice and a cherry', 'Shake with ice cubes. Strain into highball glass.', 'https://upload.wikimedia.org/wikipedia/commons/2/2d/Singapore_Sling_cocktail.jpg')
+    VALUES ('singapore-sling', 'Singapore Sling', 'highball', 'Longdrink', 'Pineapple slice and a cherry', 'Shake with ice cubes. Strain into highball glass.', 'https://upload.wikimedia.org/wikipedia/commons/5/54/16-09-17-WikiLovesCocktails-Drink-Img0266_1.jpg')
     RETURNING id
 )
 INSERT INTO ingredients (cocktail_id, position, base_ingredient_id, amount, unit, label, special)
@@ -474,7 +474,7 @@ VALUES
 -- Cocktail: Moscow Mule
 WITH new_cocktail AS (
     INSERT INTO cocktails (slug, name, glass, category, garnish, preparation, image_url)
-    VALUES ('moscow-mule', 'Moscow Mule', 'highball', 'Longdrink', 'Lime slice', 'Combine the vodka and ginger beer. Add lime juice.', 'https://upload.wikimedia.org/wikipedia/commons/2/2d/Moscow_Mule_cocktail.jpg')
+    VALUES ('moscow-mule', 'Moscow Mule', 'highball', 'Longdrink', 'Lime slice', 'Combine the vodka and ginger beer. Add lime juice.', 'https://upload.wikimedia.org/wikipedia/commons/5/54/16-09-17-WikiLovesCocktails-Drink-Img0266_1.jpg')
     RETURNING id
 )
 INSERT INTO ingredients (cocktail_id, position, base_ingredient_id, amount, unit, label, special)
@@ -486,7 +486,7 @@ VALUES
 -- Cocktail: John Collins
 WITH new_cocktail AS (
     INSERT INTO cocktails (slug, name, glass, category, garnish, preparation, image_url)
-    VALUES ('john-collins', 'John Collins', 'highball', 'Longdrink', 'Lemon slice and a cherry', 'Build into highball glass filled with ice. Stir gently. Add a dash of Angostura bitters. (Note: Use Old Tom Gin for Tom Collins)', 'https://upload.wikimedia.org/wikipedia/commons/2/2d/John_Collins_cocktail.jpg')
+    VALUES ('john-collins', 'John Collins', 'highball', 'Longdrink', 'Lemon slice and a cherry', 'Build into highball glass filled with ice. Stir gently. Add a dash of Angostura bitters. (Note: Use Old Tom Gin for Tom Collins)', 'https://upload.wikimedia.org/wikipedia/commons/5/54/16-09-17-WikiLovesCocktails-Drink-Img0266_1.jpg')
     RETURNING id
 )
 INSERT INTO ingredients (cocktail_id, position, base_ingredient_id, amount, unit, label, special)
@@ -499,7 +499,7 @@ VALUES
 -- Cocktail: Kir
 WITH new_cocktail AS (
     INSERT INTO cocktails (slug, name, glass, category, garnish, preparation, image_url)
-    VALUES ('kir', 'Kir', 'white-wine', 'Before Dinner Cocktail', NULL, 'Pour Créme de Cassis into glass, top up with white wine. For Kir Royal: Use champagne instead of white wine.', 'https://upload.wikimedia.org/wikipedia/commons/2/2d/Kir_cocktail.jpg')
+    VALUES ('kir', 'Kir', 'white-wine', 'Before Dinner Cocktail', NULL, 'Pour Créme de Cassis into glass, top up with white wine. For Kir Royal: Use champagne instead of white wine.', 'https://upload.wikimedia.org/wikipedia/commons/5/54/16-09-17-WikiLovesCocktails-Drink-Img0266_1.jpg')
     RETURNING id
 )
 INSERT INTO ingredients (cocktail_id, position, base_ingredient_id, amount, unit, label, special)
@@ -510,7 +510,7 @@ VALUES
 -- Cocktail: Mint Julep
 WITH new_cocktail AS (
     INSERT INTO cocktails (slug, name, glass, category, garnish, preparation, image_url)
-    VALUES ('mint-julep', 'Mint Julep', 'highball', 'Longdrink', 'Mint sprig', 'In a highball glass gently muddle the mint, sugar and water. Fill the glass with cracked ice, add Bourbon and stir well until the glass is frost.', 'https://iba-world.com/wp-content/uploads/2020/12/mint-julep.jpg')
+    VALUES ('mint-julep', 'Mint Julep', 'highball', 'Longdrink', 'Mint sprig', 'In a highball glass gently muddle the mint, sugar and water. Fill the glass with cracked ice, add Bourbon and stir well until the glass is frost.', 'https://upload.wikimedia.org/wikipedia/commons/5/54/16-09-17-WikiLovesCocktails-Drink-Img0266_1.jpg')
     RETURNING id
 )
 INSERT INTO ingredients (cocktail_id, position, base_ingredient_id, amount, unit, label, special)
@@ -520,7 +520,7 @@ VALUES
 -- Cocktail: Paradise
 WITH new_cocktail AS (
     INSERT INTO cocktails (slug, name, glass, category, garnish, preparation, image_url)
-    VALUES ('paradise', 'Paradise', 'martini', 'All Day Cocktail', NULL, 'Shake with ice cubes. Strain into chilled cocktail glass.', 'https://iba-world.com/wp-content/uploads/2020/12/paradise.jpg')
+    VALUES ('paradise', 'Paradise', 'martini', 'All Day Cocktail', NULL, 'Shake with ice cubes. Strain into chilled cocktail glass.', 'https://upload.wikimedia.org/wikipedia/commons/b/b3/Paradise_cocktail.jpg')
     RETURNING id
 )
 INSERT INTO ingredients (cocktail_id, position, base_ingredient_id, amount, unit, label, special)
@@ -532,7 +532,7 @@ VALUES
 -- Cocktail: Champagne Cocktail
 WITH new_cocktail AS (
     INSERT INTO cocktails (slug, name, glass, category, garnish, preparation, image_url)
-    VALUES ('champagne-cocktail', 'Champagne Cocktail', 'champagne-flute', 'Sparkling Cocktail', 'Orange slice and a cherry', 'Add dash of Angostura bitter onto sugar cube and drop it into champagne flute. Add cognac followed by pouring gently chilled champagne.', 'https://iba-world.com/wp-content/uploads/2020/12/champagne-cocktail.jpg')
+    VALUES ('champagne-cocktail', 'Champagne Cocktail', 'champagne-flute', 'Sparkling Cocktail', 'Orange slice and a cherry', 'Add dash of Angostura bitter onto sugar cube and drop it into champagne flute. Add cognac followed by pouring gently chilled champagne.', 'https://upload.wikimedia.org/wikipedia/commons/5/54/16-09-17-WikiLovesCocktails-Drink-Img0266_1.jpg')
     RETURNING id
 )
 INSERT INTO ingredients (cocktail_id, position, base_ingredient_id, amount, unit, label, special)
@@ -543,7 +543,7 @@ VALUES
 -- Cocktail: Mary Pickford
 WITH new_cocktail AS (
     INSERT INTO cocktails (slug, name, glass, category, garnish, preparation, image_url)
-    VALUES ('mary-pickford', 'Mary Pickford', 'martini', 'All Day Cocktail', NULL, 'Shake and strain into a chilled large cocktail glass.', 'https://iba-world.com/wp-content/uploads/2020/12/mary-pickford.jpg')
+    VALUES ('mary-pickford', 'Mary Pickford', 'martini', 'All Day Cocktail', NULL, 'Shake and strain into a chilled large cocktail glass.', 'https://upload.wikimedia.org/wikipedia/commons/1/1a/Mary_Pickford_Cocktail.jpg')
     RETURNING id
 )
 INSERT INTO ingredients (cocktail_id, position, base_ingredient_id, amount, unit, label, special)
@@ -556,7 +556,7 @@ VALUES
 -- Cocktail: Hemingway Special
 WITH new_cocktail AS (
     INSERT INTO cocktails (slug, name, glass, category, garnish, preparation, image_url)
-    VALUES ('hemingway-special', 'Hemingway Special', 'martini', 'All Day Cocktail', NULL, 'Shake with ice cubes. Strain into a double cocktail glass.', 'https://iba-world.com/wp-content/uploads/2020/12/hemingway-special.jpg')
+    VALUES ('hemingway-special', 'Hemingway Special', 'martini', 'All Day Cocktail', NULL, 'Shake with ice cubes. Strain into a double cocktail glass.', 'https://upload.wikimedia.org/wikipedia/commons/b/bc/Velvet_Tango_Room_218.jpg')
     RETURNING id
 )
 INSERT INTO ingredients (cocktail_id, position, base_ingredient_id, amount, unit, label, special)
@@ -569,7 +569,7 @@ VALUES
 -- Cocktail: Dark 'n' Stormy
 WITH new_cocktail AS (
     INSERT INTO cocktails (slug, name, glass, category, garnish, preparation, image_url)
-    VALUES ('dark-n-stormy', 'Dark ''n'' Stormy', 'highball', 'Longdrink', 'Lime wedge', 'Build into highball glass filled with ice. Add rum first and top it with ginger beer.', 'https://iba-world.com/wp-content/uploads/2020/12/dark-n-stormy.jpg')
+    VALUES ('dark-n-stormy', 'Dark ''n'' Stormy', 'highball', 'Longdrink', 'Lime wedge', 'Build into highball glass filled with ice. Add rum first and top it with ginger beer.', 'https://upload.wikimedia.org/wikipedia/commons/2/2d/Dark_%27n%27_Stormy_cocktail.jpg')
     RETURNING id
 )
 INSERT INTO ingredients (cocktail_id, position, base_ingredient_id, amount, unit, label, special)
@@ -580,7 +580,7 @@ VALUES
 -- Cocktail: Russian Spring Punch
 WITH new_cocktail AS (
     INSERT INTO cocktails (slug, name, glass, category, garnish, preparation, image_url)
-    VALUES ('russian-spring-punch', 'Russian Spring Punch', 'highball', 'Sparkling Cocktail', 'Lemon slice and a blackberry', 'Shake the ingredients and pour into highball glass. Top with Sparkling wine.', 'https://iba-world.com/wp-content/uploads/2020/12/russian-spring-punch.jpg')
+    VALUES ('russian-spring-punch', 'Russian Spring Punch', 'highball', 'Sparkling Cocktail', 'Lemon slice and a blackberry', 'Shake the ingredients and pour into highball glass. Top with Sparkling wine.', 'https://upload.wikimedia.org/wikipedia/commons/4/45/Russian_spring_punch.jpg')
     RETURNING id
 )
 INSERT INTO ingredients (cocktail_id, position, base_ingredient_id, amount, unit, label, special)
@@ -593,7 +593,7 @@ VALUES
 -- Cocktail: Cosmopolitan
 WITH new_cocktail AS (
     INSERT INTO cocktails (slug, name, glass, category, garnish, preparation, image_url)
-    VALUES ('cosmopolitan', 'Cosmopolitan', 'martini', 'All Day Cocktail', 'Lime slice', 'Shake with ice cubes. Strain into a large cocktail glass.', 'https://iba-world.com/wp-content/uploads/2020/12/cosmopolitan.jpg')
+    VALUES ('cosmopolitan', 'Cosmopolitan', 'martini', 'All Day Cocktail', 'Lime slice', 'Shake with ice cubes. Strain into a large cocktail glass.', 'https://upload.wikimedia.org/wikipedia/commons/3/36/Cosmopolitan_003.jpg')
     RETURNING id
 )
 INSERT INTO ingredients (cocktail_id, position, base_ingredient_id, amount, unit, label, special)
@@ -606,7 +606,7 @@ VALUES
 -- Cocktail: Dry Martini
 WITH new_cocktail AS (
     INSERT INTO cocktails (slug, name, glass, category, garnish, preparation, image_url)
-    VALUES ('dry-martini', 'Dry Martini', 'martini', 'Before Dinner Cocktail', NULL, 'Stir in mixing glass with ice cubes. Strain into chilled martini glass. Squeeze oil from lemon peel onto the drink, or garnish with olive.', 'https://iba-world.com/wp-content/uploads/2020/12/dry-martini.jpg')
+    VALUES ('dry-martini', 'Dry Martini', 'martini', 'Before Dinner Cocktail', NULL, 'Stir in mixing glass with ice cubes. Strain into chilled martini glass. Squeeze oil from lemon peel onto the drink, or garnish with olive.', 'https://upload.wikimedia.org/wikipedia/commons/1/10/Dry_Martini-2.jpg')
     RETURNING id
 )
 INSERT INTO ingredients (cocktail_id, position, base_ingredient_id, amount, unit, label, special)
@@ -617,7 +617,7 @@ VALUES
 -- Cocktail: Between the Sheets
 WITH new_cocktail AS (
     INSERT INTO cocktails (slug, name, glass, category, garnish, preparation, image_url)
-    VALUES ('between-the-sheets', 'Between the Sheets', 'martini', 'All Day Cocktail', NULL, 'Shake with ice cubes. Strain into chilled cocktail glass.', 'https://iba-world.com/wp-content/uploads/2020/12/between-the-sheets.jpg')
+    VALUES ('between-the-sheets', 'Between the Sheets', 'martini', 'All Day Cocktail', NULL, 'Shake with ice cubes. Strain into chilled cocktail glass.', 'https://upload.wikimedia.org/wikipedia/commons/b/bf/Between_The_Sheets_Cocktail.jpg')
     RETURNING id
 )
 INSERT INTO ingredients (cocktail_id, position, base_ingredient_id, amount, unit, label, special)
@@ -630,7 +630,7 @@ VALUES
 -- Cocktail: Casino
 WITH new_cocktail AS (
     INSERT INTO cocktails (slug, name, glass, category, garnish, preparation, image_url)
-    VALUES ('casino', 'Casino', 'martini', 'All Day Cocktail', 'Lemon twist and a cherry', 'Shake with ice cubes. Strain into chilled cocktail glass.', 'https://iba-world.com/wp-content/uploads/2020/12/casino.jpg')
+    VALUES ('casino', 'Casino', 'martini', 'All Day Cocktail', 'Lemon twist and a cherry', 'Shake with ice cubes. Strain into chilled cocktail glass.', 'https://upload.wikimedia.org/wikipedia/commons/a/a7/Casino_cocktail.jpg')
     RETURNING id
 )
 INSERT INTO ingredients (cocktail_id, position, base_ingredient_id, amount, unit, label, special)
@@ -643,7 +643,7 @@ VALUES
 -- Cocktail: Caipirinha
 WITH new_cocktail AS (
     INSERT INTO cocktails (slug, name, glass, category, garnish, preparation, image_url)
-    VALUES ('caipirinha', 'Caipirinha', 'old-fashioned', 'All Day Cocktail', NULL, 'Place lime and sugar in old fashion glass and muddle. Fill glass with ice and Cachaca (note:Caipiroska- use Vodka instead of Cachaca).', 'https://iba-world.com/wp-content/uploads/2020/12/caipirinha.jpg')
+    VALUES ('caipirinha', 'Caipirinha', 'old-fashioned', 'All Day Cocktail', NULL, 'Place lime and sugar in old fashion glass and muddle. Fill glass with ice and Cachaca (note:Caipiroska- use Vodka instead of Cachaca).', 'https://upload.wikimedia.org/wikipedia/commons/a/a6/Caipirinha_picture.jpg')
     RETURNING id
 )
 INSERT INTO ingredients (cocktail_id, position, base_ingredient_id, amount, unit, label, special)
@@ -653,7 +653,7 @@ VALUES
 -- Cocktail: Harvey Wallbanger
 WITH new_cocktail AS (
     INSERT INTO cocktails (slug, name, glass, category, garnish, preparation, image_url)
-    VALUES ('harvey-wallbanger', 'Harvey Wallbanger', 'highball', 'All Day Cocktail', 'Orance slice and a cherry', 'Build vodka and orange juice into a highball glass filled with ice. Stir gently and float Galliano on top.', 'https://iba-world.com/wp-content/uploads/2020/12/harvey-wallbanger.jpg')
+    VALUES ('harvey-wallbanger', 'Harvey Wallbanger', 'highball', 'All Day Cocktail', 'Orance slice and a cherry', 'Build vodka and orange juice into a highball glass filled with ice. Stir gently and float Galliano on top.', 'https://upload.wikimedia.org/wikipedia/commons/4/44/Harvey_Wallbanger.jpg')
     RETURNING id
 )
 INSERT INTO ingredients (cocktail_id, position, base_ingredient_id, amount, unit, label, special)

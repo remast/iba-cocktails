@@ -210,7 +210,7 @@ VALUES
 -- Cocktail: Gin Fizz
 WITH new_cocktail AS (
     INSERT INTO cocktails (slug, name, glass, category, garnish, preparation, image_url)
-    VALUES ('gin-fizz', 'Gin Fizz', 'highball', 'Longdrink', 'Lemon slice', 'Shake all ingredients with ice cubes, except soda water. Pour into tumbler. Top with soda water.', 'https://iba-world.com/wp-content/uploads/2020/12/gin-fizz.jpg')
+    VALUES ('gin-fizz', 'Gin Fizz', 'highball', 'Longdrink', 'Lemon slice', 'Shake all ingredients with ice cubes, except soda water. Pour into tumbler. Top with soda water.', 'https://upload.wikimedia.org/wikipedia/commons/7/7e/Gin_Fizz_cocktail.jpg')
     RETURNING id
 )
 INSERT INTO ingredients (cocktail_id, position, base_ingredient_id, amount, unit, label, special)
@@ -223,7 +223,7 @@ VALUES
 -- Cocktail: Espresso Martini
 WITH new_cocktail AS (
     INSERT INTO cocktails (slug, name, glass, category, garnish, preparation, image_url)
-    VALUES ('espresso-martini', 'Espresso Martini', 'martini', 'After Dinner Cocktail', NULL, 'Shake and strain into a chilled cocktail glass.', 'https://iba-world.com/wp-content/uploads/2020/12/espresso-martini.jpg')
+    VALUES ('espresso-martini', 'Espresso Martini', 'martini', 'After Dinner Cocktail', NULL, 'Shake and strain into a chilled cocktail glass.', 'https://upload.wikimedia.org/wikipedia/commons/6/6a/Espresso_Martini_cocktail.jpg')
     RETURNING id
 )
 INSERT INTO ingredients (cocktail_id, position, base_ingredient_id, amount, unit, label, special)
@@ -234,7 +234,7 @@ VALUES
 -- Cocktail: Margarita
 WITH new_cocktail AS (
     INSERT INTO cocktails (slug, name, glass, category, garnish, preparation, image_url)
-    VALUES ('margarita', 'Margarita', 'margarita', 'All Day Cocktail', NULL, 'Shake with ice cubes. Strain into cocktail glass rimmed with salt (note:Fruit Margarita - blend selected fruit with the above recipe).', 'https://iba-world.com/wp-content/uploads/2020/12/margarita.jpg')
+    VALUES ('margarita', 'Margarita', 'margarita', 'All Day Cocktail', NULL, 'Shake with ice cubes. Strain into cocktail glass rimmed with salt (note:Fruit Margarita - blend selected fruit with the above recipe).', 'https://upload.wikimedia.org/wikipedia/commons/6/6b/MargaritaReal.jpg')
     RETURNING id
 )
 INSERT INTO ingredients (cocktail_id, position, base_ingredient_id, amount, unit, label, special)
@@ -246,7 +246,7 @@ VALUES
 -- Cocktail: Aviation
 WITH new_cocktail AS (
     INSERT INTO cocktails (slug, name, glass, category, garnish, preparation, image_url)
-    VALUES ('aviation', 'Aviation', 'martini', 'All Day Cocktail', NULL, 'Shake and strain into a chilled cocktail glass.', 'https://iba-world.com/wp-content/uploads/2020/12/aviation.jpg')
+    VALUES ('aviation', 'Aviation', 'martini', 'All Day Cocktail', NULL, 'Shake and strain into a chilled cocktail glass.', 'https://upload.wikimedia.org/wikipedia/commons/0/0b/Aviation_Cocktail.jpg')
     RETURNING id
 )
 INSERT INTO ingredients (cocktail_id, position, base_ingredient_id, amount, unit, label, special)
@@ -258,7 +258,7 @@ VALUES
 -- Cocktail: Bellini
 WITH new_cocktail AS (
     INSERT INTO cocktails (slug, name, glass, category, garnish, preparation, image_url)
-    VALUES ('bellini', 'Bellini', 'champagne-flute', 'Sparkling Cocktail', NULL, 'Pour peach puree into chilled glass and add sparkling wine. Stir gently. Variations: Puccini (fresh mandarin juice), Rossini (fresh strawberry puree), Tintoretto (fresh pomegranate juice)', 'https://iba-world.com/wp-content/uploads/2020/12/bellini.jpg')
+    VALUES ('bellini', 'Bellini', 'champagne-flute', 'Sparkling Cocktail', NULL, 'Pour peach puree into chilled glass and add sparkling wine. Stir gently. Variations: Puccini (fresh mandarin juice), Rossini (fresh strawberry puree), Tintoretto (fresh pomegranate juice)', 'https://upload.wikimedia.org/wikipedia/commons/2/2b/Bellini_cocktail.jpg')
     RETURNING id
 )
 INSERT INTO ingredients (cocktail_id, position, base_ingredient_id, amount, unit, label, special)
@@ -269,7 +269,7 @@ VALUES
 -- Cocktail: Grasshopper
 WITH new_cocktail AS (
     INSERT INTO cocktails (slug, name, glass, category, garnish, preparation, image_url)
-    VALUES ('grasshopper', 'Grasshopper', 'martini', 'After Dinner Cocktail', NULL, 'Shake with ice cubes. Strain into chilled cocktail glass.', 'https://iba-world.com/wp-content/uploads/2020/12/grasshopper.jpg')
+    VALUES ('grasshopper', 'Grasshopper', 'martini', 'After Dinner Cocktail', NULL, 'Shake with ice cubes. Strain into chilled cocktail glass.', 'https://upload.wikimedia.org/wikipedia/commons/2/2d/Grasshopper_cocktail.jpg')
     RETURNING id
 )
 INSERT INTO ingredients (cocktail_id, position, base_ingredient_id, amount, unit, label, special)
@@ -281,7 +281,7 @@ VALUES
 -- Cocktail: Tequila Sunrise
 WITH new_cocktail AS (
     INSERT INTO cocktails (slug, name, glass, category, garnish, preparation, image_url)
-    VALUES ('tequila-sunrise', 'Tequila Sunrise', 'highball', 'Longdrink', 'Orange slice and a cherry', 'Build tequila and orange juice into highball with ice cubes. Add a splash of grenadine to create sunrise effect. Do not stir.', 'https://iba-world.com/wp-content/uploads/2020/12/tequila-sunrise.jpg')
+    VALUES ('tequila-sunrise', 'Tequila Sunrise', 'highball', 'Longdrink', 'Orange slice and a cherry', 'Build tequila and orange juice into highball with ice cubes. Add a splash of grenadine to create sunrise effect. Do not stir.', 'https://upload.wikimedia.org/wikipedia/commons/5/5a/Tequila_Sunrise_cocktail.jpg')
     RETURNING id
 )
 INSERT INTO ingredients (cocktail_id, position, base_ingredient_id, amount, unit, label, special)
@@ -293,7 +293,7 @@ VALUES
 -- Cocktail: Daiquiri
 WITH new_cocktail AS (
     INSERT INTO cocktails (slug, name, glass, category, garnish, preparation, image_url)
-    VALUES ('daiquiri', 'Daiquiri', 'martini', 'Before Dinner Cocktail', NULL, 'Shake and strain into a cocktail glass.', 'https://iba-world.com/wp-content/uploads/2020/12/daiquiri.jpg')
+    VALUES ('daiquiri', 'Daiquiri', 'martini', 'Before Dinner Cocktail', NULL, 'Shake and strain into a cocktail glass.', 'https://upload.wikimedia.org/wikipedia/commons/6/6b/Daiquiri_cocktail.jpg')
     RETURNING id
 )
 INSERT INTO ingredients (cocktail_id, position, base_ingredient_id, amount, unit, label, special)
@@ -305,7 +305,7 @@ VALUES
 -- Cocktail: Rusty Nail
 WITH new_cocktail AS (
     INSERT INTO cocktails (slug, name, glass, category, garnish, preparation, image_url)
-    VALUES ('rusty-nail', 'Rusty Nail', 'old-fashioned', 'After Dinner Cocktail', 'Lemon twist', 'Build into old-fashioned glass filled with ice. Stir gently.', 'https://iba-world.com/wp-content/uploads/2020/12/rusty-nail.jpg')
+    VALUES ('rusty-nail', 'Rusty Nail', 'old-fashioned', 'After Dinner Cocktail', 'Lemon twist', 'Build into old-fashioned glass filled with ice. Stir gently.', 'https://upload.wikimedia.org/wikipedia/commons/2/2e/Rusty_Nail_cocktail.jpg')
     RETURNING id
 )
 INSERT INTO ingredients (cocktail_id, position, base_ingredient_id, amount, unit, label, special)
@@ -316,7 +316,7 @@ VALUES
 -- Cocktail: Stinger
 WITH new_cocktail AS (
     INSERT INTO cocktails (slug, name, glass, category, garnish, preparation, image_url)
-    VALUES ('stinger', 'Stinger', 'martini', 'After Dinner Cocktail', NULL, 'Stir in mixing glass with ice cubes. Strain into a cocktail glass.', 'https://iba-world.com/wp-content/uploads/2020/12/stinger.jpg')
+    VALUES ('stinger', 'Stinger', 'martini', 'After Dinner Cocktail', NULL, 'Stir in mixing glass with ice cubes. Strain into a cocktail glass.', 'https://upload.wikimedia.org/wikipedia/commons/2/2d/Stinger_cocktail.jpg')
     RETURNING id
 )
 INSERT INTO ingredients (cocktail_id, position, base_ingredient_id, amount, unit, label, special)
@@ -327,7 +327,7 @@ VALUES
 -- Cocktail: Golden Dream
 WITH new_cocktail AS (
     INSERT INTO cocktails (slug, name, glass, category, garnish, preparation, image_url)
-    VALUES ('golden-dream', 'Golden Dream', 'martini', 'After Dinner Cocktail', NULL, 'Shake with ice cubes. Strain into chilled cocktail glass.', 'https://iba-world.com/wp-content/uploads/2020/12/golden-dream.jpg')
+    VALUES ('golden-dream', 'Golden Dream', 'martini', 'After Dinner Cocktail', NULL, 'Shake with ice cubes. Strain into chilled cocktail glass.', 'https://upload.wikimedia.org/wikipedia/commons/2/2d/Golden_Dream_cocktail.jpg')
     RETURNING id
 )
 INSERT INTO ingredients (cocktail_id, position, base_ingredient_id, amount, unit, label, special)
@@ -340,7 +340,7 @@ VALUES
 -- Cocktail: Bramble
 WITH new_cocktail AS (
     INSERT INTO cocktails (slug, name, glass, category, garnish, preparation, image_url)
-    VALUES ('bramble', 'Bramble', 'old-fashioned', 'All Day Cocktail', 'Lemon slice and two blackberries', 'Build over crushed ice, in a rock glass. Stir, then pour the blackberry liqueur over the top of the drink in a circular fashion.', 'https://iba-world.com/wp-content/uploads/2020/12/bramble.jpg')
+    VALUES ('bramble', 'Bramble', 'old-fashioned', 'All Day Cocktail', 'Lemon slice and two blackberries', 'Build over crushed ice, in a rock glass. Stir, then pour the blackberry liqueur over the top of the drink in a circular fashion.', 'https://upload.wikimedia.org/wikipedia/commons/2/2d/Bramble_cocktail.jpg')
     RETURNING id
 )
 INSERT INTO ingredients (cocktail_id, position, base_ingredient_id, amount, unit, label, special)
@@ -353,7 +353,7 @@ VALUES
 -- Cocktail: Alexander
 WITH new_cocktail AS (
     INSERT INTO cocktails (slug, name, glass, category, garnish, preparation, image_url)
-    VALUES ('alexander', 'Alexander', 'martini', NULL, NULL, 'Shake and strain into a chilled cocktail glass. Sprinkle with fresh ground nutmeg.', 'https://iba-world.com/wp-content/uploads/2020/12/alexander.jpg')
+    VALUES ('alexander', 'Alexander', 'martini', NULL, NULL, 'Shake and strain into a chilled cocktail glass. Sprinkle with fresh ground nutmeg.', 'https://upload.wikimedia.org/wikipedia/commons/2/2d/Alexander_cocktail.jpg')
     RETURNING id
 )
 INSERT INTO ingredients (cocktail_id, position, base_ingredient_id, amount, unit, label, special)
@@ -365,7 +365,7 @@ VALUES
 -- Cocktail: Black Russian
 WITH new_cocktail AS (
     INSERT INTO cocktails (slug, name, glass, category, garnish, preparation, image_url)
-    VALUES ('black-russian', 'Black Russian', 'old-fashioned', 'After Dinner Cocktail', NULL, 'Build into old fashioned glass filled with ice cubes. Stir gently. Note: for White Russian, float fresh cream on the top and stir gently.', 'https://iba-world.com/wp-content/uploads/2020/12/black-russian.jpg')
+    VALUES ('black-russian', 'Black Russian', 'old-fashioned', 'After Dinner Cocktail', NULL, 'Build into old fashioned glass filled with ice cubes. Stir gently. Note: for White Russian, float fresh cream on the top and stir gently.', 'https://upload.wikimedia.org/wikipedia/commons/2/2d/Black_Russian_cocktail.jpg')
     RETURNING id
 )
 INSERT INTO ingredients (cocktail_id, position, base_ingredient_id, amount, unit, label, special)
@@ -376,7 +376,7 @@ VALUES
 -- Cocktail: Bloody Mary
 WITH new_cocktail AS (
     INSERT INTO cocktails (slug, name, glass, category, garnish, preparation, image_url)
-    VALUES ('bloody-mary', 'Bloody Mary', 'highball', 'Longdrink', 'Celery and optionally lemon wedge', 'Stir gently, pour all ingredients into highball glass.', 'https://iba-world.com/wp-content/uploads/2020/12/bloody-mary.jpg')
+    VALUES ('bloody-mary', 'Bloody Mary', 'highball', 'Longdrink', 'Celery and optionally lemon wedge', 'Stir gently, pour all ingredients into highball glass.', 'https://upload.wikimedia.org/wikipedia/commons/2/2d/Bloody_Mary_cocktail.jpg')
     RETURNING id
 )
 INSERT INTO ingredients (cocktail_id, position, base_ingredient_id, amount, unit, label, special)

@@ -458,7 +458,7 @@ VALUES
 -- Cocktail: Singapore Sling
 WITH new_cocktail AS (
     INSERT INTO cocktails (slug, name, glass, category, garnish, preparation, image_url)
-    VALUES ('singapore-sling', 'Singapore Sling', 'highball', 'Longdrink', 'Pineapple slice and a cherry', 'Shake with ice cubes. Strain into highball glass.', 'https://upload.wikimedia.org/wikipedia/commons/5/54/16-09-17-WikiLovesCocktails-Drink-Img0266_1.jpg')
+    VALUES ('singapore-sling', 'Singapore Sling', 'highball', 'Longdrink', 'Pineapple slice and a cherry', 'Shake with ice cubes. Strain into highball glass.', 'https://upload.wikimedia.org/wikipedia/commons/4/44/Singapore_Sling.jpg')
     RETURNING id
 )
 INSERT INTO ingredients (cocktail_id, position, base_ingredient_id, amount, unit, label, special)
@@ -474,7 +474,7 @@ VALUES
 -- Cocktail: Moscow Mule
 WITH new_cocktail AS (
     INSERT INTO cocktails (slug, name, glass, category, garnish, preparation, image_url)
-    VALUES ('moscow-mule', 'Moscow Mule', 'highball', 'Longdrink', 'Lime slice', 'Combine the vodka and ginger beer. Add lime juice.', 'https://upload.wikimedia.org/wikipedia/commons/5/54/16-09-17-WikiLovesCocktails-Drink-Img0266_1.jpg')
+    VALUES ('moscow-mule', 'Moscow Mule', 'highball', 'Longdrink', 'Lime slice', 'Combine the vodka and ginger beer. Add lime juice.', 'https://upload.wikimedia.org/wikipedia/commons/6/68/Reel_and_Brand_-_September_2021_-_Sarah_Stierch_06.jpg')
     RETURNING id
 )
 INSERT INTO ingredients (cocktail_id, position, base_ingredient_id, amount, unit, label, special)
@@ -486,7 +486,7 @@ VALUES
 -- Cocktail: John Collins
 WITH new_cocktail AS (
     INSERT INTO cocktails (slug, name, glass, category, garnish, preparation, image_url)
-    VALUES ('john-collins', 'John Collins', 'highball', 'Longdrink', 'Lemon slice and a cherry', 'Build into highball glass filled with ice. Stir gently. Add a dash of Angostura bitters. (Note: Use Old Tom Gin for Tom Collins)', 'https://upload.wikimedia.org/wikipedia/commons/5/54/16-09-17-WikiLovesCocktails-Drink-Img0266_1.jpg')
+    VALUES ('john-collins', 'John Collins', 'highball', 'Longdrink', 'Lemon slice and a cherry', 'Build into highball glass filled with ice. Stir gently. Add a dash of Angostura bitters. (Note: Use Old Tom Gin for Tom Collins)', 'https://upload.wikimedia.org/wikipedia/commons/8/88/Tom_Tonic_Collins.png')
     RETURNING id
 )
 INSERT INTO ingredients (cocktail_id, position, base_ingredient_id, amount, unit, label, special)
@@ -499,7 +499,7 @@ VALUES
 -- Cocktail: Kir
 WITH new_cocktail AS (
     INSERT INTO cocktails (slug, name, glass, category, garnish, preparation, image_url)
-    VALUES ('kir', 'Kir', 'white-wine', 'Before Dinner Cocktail', NULL, 'Pour Créme de Cassis into glass, top up with white wine. For Kir Royal: Use champagne instead of white wine.', 'https://upload.wikimedia.org/wikipedia/commons/5/54/16-09-17-WikiLovesCocktails-Drink-Img0266_1.jpg')
+    VALUES ('kir', 'Kir', 'white-wine', 'Before Dinner Cocktail', NULL, 'Pour Créme de Cassis into glass, top up with white wine. For Kir Royal: Use champagne instead of white wine.', 'https://upload.wikimedia.org/wikipedia/commons/c/c3/Kir_cocktail.jpg')
     RETURNING id
 )
 INSERT INTO ingredients (cocktail_id, position, base_ingredient_id, amount, unit, label, special)
@@ -510,7 +510,7 @@ VALUES
 -- Cocktail: Mint Julep
 WITH new_cocktail AS (
     INSERT INTO cocktails (slug, name, glass, category, garnish, preparation, image_url)
-    VALUES ('mint-julep', 'Mint Julep', 'highball', 'Longdrink', 'Mint sprig', 'In a highball glass gently muddle the mint, sugar and water. Fill the glass with cracked ice, add Bourbon and stir well until the glass is frost.', 'https://upload.wikimedia.org/wikipedia/commons/5/54/16-09-17-WikiLovesCocktails-Drink-Img0266_1.jpg')
+    VALUES ('mint-julep', 'Mint Julep', 'highball', 'Longdrink', 'Mint sprig', 'In a highball glass gently muddle the mint, sugar and water. Fill the glass with cracked ice, add Bourbon and stir well until the glass is frost.', 'https://upload.wikimedia.org/wikipedia/commons/6/64/Mint_Juleps.jpg')
     RETURNING id
 )
 INSERT INTO ingredients (cocktail_id, position, base_ingredient_id, amount, unit, label, special)
@@ -532,7 +532,7 @@ VALUES
 -- Cocktail: Champagne Cocktail
 WITH new_cocktail AS (
     INSERT INTO cocktails (slug, name, glass, category, garnish, preparation, image_url)
-    VALUES ('champagne-cocktail', 'Champagne Cocktail', 'champagne-flute', 'Sparkling Cocktail', 'Orange slice and a cherry', 'Add dash of Angostura bitter onto sugar cube and drop it into champagne flute. Add cognac followed by pouring gently chilled champagne.', 'https://upload.wikimedia.org/wikipedia/commons/5/54/16-09-17-WikiLovesCocktails-Drink-Img0266_1.jpg')
+    VALUES ('champagne-cocktail', 'Champagne Cocktail', 'champagne-flute', 'Sparkling Cocktail', 'Orange slice and a cherry', 'Add dash of Angostura bitter onto sugar cube and drop it into champagne flute. Add cognac followed by pouring gently chilled champagne.', 'https://upload.wikimedia.org/wikipedia/commons/7/7e/Verre_Champagne.jpg')
     RETURNING id
 )
 INSERT INTO ingredients (cocktail_id, position, base_ingredient_id, amount, unit, label, special)
